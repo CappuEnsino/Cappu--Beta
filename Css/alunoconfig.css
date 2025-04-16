@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #684a43;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  margin: 0; 
+  padding: 0; 
+  flex-direction: column;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+}
+
+main {
+  height: auto;
+  width: 100%; 
+  max-width: 1200px; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; 
+  padding: 0 1em; 
+  padding-top: 7rem;
+}
+
+main h1 {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3em;
+  line-height: 0.75em;
+  letter-spacing: 0%;
+  color: var(--primary-color);
+  margin-top: 9rem;
+}
+
+.dados {
+  margin-top: 7rem;
+}
+
+.dados h2 {
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-size: 2.5em;
+  line-height: 3em;
+  letter-spacing: 0%;
+}
+
+.dados img {
+  width: 18.75em;
+  height: auto;
+  margin-top: 6.125em;
+  display: block; 
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-key {
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 2em;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+.info-value {
+  font-family: Fira Sans;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  letter-spacing: 0%;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  min-width: 25em;
+}
+
+.info-value-form {
+  font-family: Fira Sans;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  letter-spacing: 0%;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid #000000;
+  min-width: 25em;
+  background-color: transparent;
+  appearance: none;
+  outline: none;
+}
+
+.info-value-form {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.5em center;
+  background-size: 1em;
+}
+
+.redefinir {
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+  border: 2px solid #000000;
+  width: 13em;
+  height: 2.25em;
+  border-radius: 1.25em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.preferencias {
+  margin-top: 5.5em;
+  width: 100%;
+  border-top: 1px solid #000000;
+}
+
+h3 {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3em;
+  line-height: 0.75em;
+  letter-spacing: 0%;
+  color: var(--primary-color);
+  margin-top: 11.875rem;
+}
+
+.caixa-das-info {
+  margin-top: 4em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer {
+  width: 100%; 
+  text-align: center; 
+  padding: 20px; 
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  margin-top: 12em;
+  
+}
+
+footer p {
+  font-family: Fira Sans;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 8%;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  main h1 {
+    font-size: 2.5em;
+    margin-top: 7rem;
+  }
+
+  .dados h2 {
+    font-size: 2em;
+  }
+
+  .info-key {
+    font-size: 1.75em;
+  }
+
+  .info-value,
+  .info-value-form {
+    font-size: 1.25em;
+    min-width: 20em;
+  }
+
+  h3 {
+    font-size: 2.5em;
+    margin-top: 9rem;
+  }
+
+  footer {
+    margin-top: 8em;
+  }
+}
+
+/* Responsividade para telas menores que 800px */
+@media (max-width: 800px) {
+  main h1 {
+    font-size: 2em;
+    margin-top: 5rem;
+  }
+
+  .dados h2 {
+    font-size: 1.75em;
+  }
+
+  .dados img {
+    width: 15em;
+  }
+
+  .info-key {
+    font-size: 1.5em;
+  }
+
+  .info-value,
+  .info-value-form {
+    font-size: 1em;
+    min-width: 15em;
+  }
+
+  .redefinir {
+    font-size: 1em;
+    width: 10em;
+    height: 2em;
+  }
+
+  h3 {
+    font-size: 2em;
+    margin-top: 7rem;
+  }
+
+  footer {
+    margin-top: 6em;
+  }
+}
+
+/* Responsividade para telas menores que 500px */
+@media (max-width: 500px) {
+  main h1 {
+    font-size: 1.5em;
+    margin-top: 3rem;
+  }
+
+  .dados h2 {
+    font-size: 1.5em;
+  }
+
+  .dados img {
+    width: 12em;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-key {
+    font-size: 1.25em;
+  }
+
+  .info-value,
+  .info-value-form {
+    font-size: 0.875em;
+    min-width: 40%;
+    margin-top: 0.5em;
+  }
+
+  .redefinir {
+    font-size: 0.875em;
+    width: 10em;
+    height: 1.75em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    margin-top: 5rem;
+  }
+
+  footer {
+    margin-top: 4em;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}

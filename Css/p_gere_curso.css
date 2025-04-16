@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #684a43;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Fira Sans", serif;
+}
+
+main {
+  height: auto;
+  display: flex;
+  width: 80%;
+  margin-left: 10%;
+  flex-direction: column;
+  margin-top: 5.625em;
+}
+
+header {
+  box-shadow: 0px 10px 20px #BFAC95;
+  padding: 1rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+header h2 {
+  color: #684a43;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.txt-pag h1 {
+  color: #684a43;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+
+}
+
+.perfil-professor {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #6c423a;
+}
+
+.form-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.left,
+.right {
+  width: 48%;
+}
+
+.left hr {
+  margin-top: 1rem;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  color: #684A43;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.capa {
+  width: 120px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.aulas {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.aulas li {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  font-size: 1.5rem;
+}
+
+.edit {
+  cursor: pointer;
+}
+
+.edit img {
+  width: 75%;
+  height: 75%;
+}
+
+.add {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+  color: #6c423a;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.add-aula {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.arquivo {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+}
+
+.tipo {
+  font-weight: bold;
+}
+
+.icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+.final {
+  margin-top: 5rem;
+}
+
+.final h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tipo_conteudo {
+  font-size: 1rem;
+  color: #000;
+  display: flex;
+  justify-content: left;
+  gap: 40%;
+  
+}
+
+.salvar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #6c423a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 4rem;
+}
+
+.salvar:hover {
+  background: #8b5d52;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/mnemonica.css" />
+    <link rel="stylesheet" href="../../css/header2.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+    <title>Mnemônica</title>
+  </head>
+  <body>
+    <header>
+      <a href="../../html/aluno/a-minharotina.html"><img src="../../Images/voltar.svg" alt=""></a>
+      <p>MÉTODOS DE ESTUDO</p>
+      <div>
+        <p>Aluno 1</p>
+        <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
+            <img  src="../../Images/perfil.svg" alt="imagem do perfil">
+            <div class="user-config" id="userConfig">
+                <ul>
+                    <li><a href="../../html/aluno/a-perfil.html">MENU</a></li>
+                    <li><a href="../../html/aluno/a-alunoconfig.html">CONFIGURAÇÕES</a></li>
+                    <li><a href="../../html/h-home.html">SAIR</a></li>
+                </ul>
+            </div>
+        </button>
+    </div>
+    </header>
+    <h1>MNEMÔNICA</h1>
+    <main class="container">
+      <section class="mnemonica">
+        <section class="controlador">
+          <section class="info-mnemonica">
+            <h2 class="subtitle">TÍTULO</h2>
+            <p class="descricao">Escreva o título do seu resumo aqui</p>
+          </section>
+          <section class="info-mnemonica">
+            <h2 class="subtitle">
+              CATEGORIA
+              <a href="#"><img src="../../Images/adicionar.svg" alt="" /></a>
+            </h2>
+            <p class="descricao">CATEGORIAS</p>
+          </section>
+        </section>
+        <section>
+          <a class="save-button" href="#"
+            >SALVAR <img src="../../Images/salvar.svg" alt=""
+          /></a>
+        </section>
+      </section>
+      <section class="organizacao-caixa">
+        <section class="caixa-texto">
+          <form action="/enviar-resumo" method="POST">
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  rows="15"
+                  cols="90"
+                  placeholder="Escreva o seu resumo aqui..."
+                ></textarea>
+              </form>
+        </section>
+        <section class="caixa-selecao">
+          <form action="/enviar-resumo" method="POST" enctype="multipart/form-data">
+            <div class="upload-container" style="position: relative; width: 630px; height: 300px; border: 2px solid #ccc; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
+              <!-- Input de upload (escondido visualmente) -->
+              <input 
+                type="file" 
+                id="imagem-upload" 
+                name="imagem" 
+                accept="image/*" 
+                style="position: absolute; width: 100%; height: 100%; opacity: 0; cursor: pointer;"
+              />
+              
+              <!-- Placeholder visual -->
+              <img src="../../Images/upload-mnemonica.svg" alt="Ícone de upload">
+              <h3>Selecionar imagem associada</h3>
+              <p style="color: #999; font-size: 12px; margin-top: 5px;">Formatos suportados: JPG, PNG, GIF</p>
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
+    <script src="../../js/icon-menu.js"></script>
+  </body>
+</html>

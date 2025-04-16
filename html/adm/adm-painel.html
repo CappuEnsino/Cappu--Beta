@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/adm.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Painel de Controle</title>
+</head>
+<body>
+    <header>
+        <img src="../../Images/logo.svg" alt="logo" id="logo">
+        <section id="user">
+            <p id="name_user">Administrador1</p>
+            <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
+                <section id="circle"></section>
+                <div class="user-config" id="userConfig">
+                    <ul>
+                        <li><a href="../home/h-home.html">SAIR</a></li>
+                    </ul>
+                </div>
+            </button>
+    </header>
+    <main>
+        <nav>
+            <section class="select">
+                <img src="../../Images/gamepad.svg" alt="Controle">
+                <p>painel de controle</p>
+            </section>
+            <a href="adm-g-cursos.html" title="gerenciamento de cursos">gerenciamento de cursos</a>
+            <a href="adm-g-usuarios.html" title="gerenciamento de usuários">gerenciamento de usuários</a>
+            <a href="adm-financeiro.html" title="financeiro">financeiro</a>
+        </nav>
+        <section class="conteudo">
+            <h1>visão geral</h1>
+            <section class="quadrado">
+                <section class="item1">
+                    <h2>atividade dos usuários</h2>
+                    <img src="../../Images/gráfico 1.png" alt="Gráfico" class="grafico">
+                </section>
+                <section class="item2">
+                    <h2>Cursos Disponíveis</h2>
+                    <img src="../../Images/grafico 2.png" alt="Gráfico" class="grafico">
+                </section>
+                <section class="item3">
+                    <h2>Faturamento</h2>
+                    <section class="faturamento">
+                        <h3 class="red">Total</h3>
+                        <h3>R$ 50.000</h3>                        
+                    </section>
+                    <section class="faturamento">
+                        <h3 class="red">Mensal</h3>
+                        <h3>R$ 12.000</h3>
+                    </section>    
+                </section>
+                <section class="item4">
+                    <h2>Tendência de Faturamento</h2>
+                    <img src="../../Images/grafico 4.png" alt="Gráfico" class="grafico">
+                </section>
+            </section>
+        </section>
+    </main>
+    <script src="../../js/icon-menu.js"></script>
+</body>
+</html>

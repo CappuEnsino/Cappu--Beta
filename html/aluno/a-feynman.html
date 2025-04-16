@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/feynman.css" />
+    <link rel="stylesheet" href="../../css/header2.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+    <title>Feynman</title>
+  </head>
+  <body>
+    <header>
+      <a href="../../html/aluno/a-minharotina.html"><img src="../../Images/voltar.svg" alt=""></a>
+      <p>MÉTODOS DE ESTUDO</p>
+      <div>
+        <p>Aluno 1</p>
+        <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
+            <img  src="../../Images/perfil.svg" alt="imagem do perfil">
+            <div class="user-config" id="userConfig">
+                <ul>
+                    <li><a href="../../html/aluno/a-perfil.html">MENU</a></li>
+                    <li><a href="../../html/aluno/a-alunoconfig.html">CONFIGURAÇÕES</a></li>
+                    <li><a href="../../html/h-home.html">SAIR</a></li>
+                </ul>
+            </div>
+        </button>
+    </div>
+    </header>
+    <h1>FEYNMAN</h1>
+    <main class="conteiner">
+      <section class="how-to">
+        <h2>COMO APLICAR?</h2>
+        <p>A técnica de Feynman consiste em 4 etapas simples, sendo:</p>
+        <section class="passos">
+          <div class="primeira-coluna">
+            <div class="um">
+              <span>1</span>
+              <div>
+                <h3>DEFINA UM TÓPICO</h3>
+                <p>Defina um tópico principal do qual você irá estudar.</p>
+              </div>
+            </div>
+            <div class="tres">
+              <span>3</span>
+              <div>
+                <h3>REVISE</h3>
+                <p>
+                  Revise o que disse ou escreveu para garantir que não há
+                  nenhuma informação falsa ou errônea.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="segunda-coluna">
+            <div class="dois">
+              <span>2</span>
+              <div>
+                <h3>EXPLIQUE-O</h3>
+                <p>
+                  Explique-o como se estivesse ensinando a uma criança, da forma
+                  mais simples que conseguir, pode ser tanto verbalmente quanto
+                  escrevendo-o.
+                </p>
+              </div>
+            </div>
+            <div class="quatro">
+              <span>4</span>
+              <div>
+                <h3>REFINE E SIMPLIFIQUE</h3>
+                <p>
+                  Refine seu resumo com informações verdadeiras e o simplifique
+                  para completar seu ciclo de estudo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <a class="save-button" href="#"
+            >SALVAR
+            <img
+              src="../../Images/salvar.svg"
+              alt="imagem de um disquete, indicando a acao de salvar"
+          /></a>
+        </section>
+      </section>
+      <section class="aplicacao-do-metodo">
+        <section class="resumo-form">
+          <form action="/enviar-resumo" method="POST">
+            <label for="titulo">TÍTULO</label><br />
+            <input
+              type="text"
+              id="titulo"
+              name="titulo"
+              placeholder="Escreva o título do seu resumo feynman aqui..."
+              required
+            />
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="15"
+              cols="90"
+              placeholder="Escreva o seu resumo aqui..."
+            ></textarea>
+          </form>
+        </section>
+      </section>
+    </main>
+    <script src="../../js/icon-menu.js"></script>
+  </body>
+</html>

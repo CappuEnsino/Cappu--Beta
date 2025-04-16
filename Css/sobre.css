@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #684a43;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: ""; 
+  position: absolute; 
+  top: 19%; 
+  left: -0%; 
+  width: 1966.48px;
+  height: 760.32px;
+  background-image: url("/img/bgdetail.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  transform: rotate(-7deg); 
+  background-size: cover;
+  border-radius: 100px; 
+  z-index: -1; 
+}
+
+.cabecalho {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px #BFAC95;
+  align-items: center;
+}
+
+.logo{
+  margin-left: 2%;
+}
+.entrar{
+  margin-right: 2%;
+}
+
+.barra {
+  border-bottom: 2px solid rgba(104, 74, 67, 0.5);
+  font-size: 18px;
+  height: 3vh;
+  color: rgba(0, 0, 0, 0.4);
+  width: 18%;
+
+}
+
+.navegacao {
+  text-decoration: none;
+  display: flex;
+  gap: 45px;
+}
+
+.navegacao a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.principal {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 18vh;
+}
+
+.descubra {
+  display: flex;
+  align-items: row;
+  justify-content: space-between;
+}
+
+.luneta {
+  width: 707px;
+  height: auto;
+}
+
+.descubra h1 {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: 0%;
+  text-align: right;
+  text-shadow: 0px 4px 10px rgba(0, 0, 8, 0.5);
+  color: var(--primary-color);
+}
+
+.aqui {
+  font-family: Fira Sans;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: right;
+  margin-top: 55px;
+}
+
+.quemsomos {
+  display: flex;
+  align-items: row;
+  margin-top: 170px;
+  justify-content: space-between;
+}
+
+.quemsomos h2 {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: 8%;
+  color: var(--primary-color);
+}
+
+.quemsomos p {
+  font-family: Fira Sans;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  max-width: 765px;
+  margin-left: 159px;
+}
+
+.destaque {
+  font-family: Fira Sans;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: var(--primary-color);
+}
+
+.missao {
+  background: conic-gradient(
+    from 180.38deg at 63.42% 9.37%,
+    rgba(255, 255, 255, 0.5) 0deg,
+    rgba(191, 172, 149, 0.5) 359.96deg,
+    rgba(255, 255, 255, 0.5) 360deg
+  );
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 448px;
+  align-items: center;
+  margin-top: 15vh;
+}
+
+.missao p {
+  font-family: Fira Sans;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  max-width: 720px;
+}
+
+.missao h3 {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: 8%;
+  text-align: right;
+  color: var(--primary-color);
+  margin-left: 4vw;
+}
+
+.duvidas {
+  margin-top: 35vh;
+}
+
+.duvidas p {
+  font-family: Fira Sans;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.aquilink {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+

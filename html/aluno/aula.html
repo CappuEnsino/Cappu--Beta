@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/header2.css">
+    <link rel="stylesheet" href="../../css/aula.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+    <title>Cappuensino</title>
+</head>
+<body>
+    <header>
+        <a href="../aluno/a-todososcursos.html"><img src="../../Images/voltar.svg" alt=""></a>
+        <p>LÓGICA DE PROGRAMAÇÃO</p>
+        <div>
+            <p>Aluno 1</p>
+            <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
+                <img  src="../../Images/perfil.svg" alt="imagem do perfil">
+                <div class="user-config" id="userConfig">
+                    <ul>
+                        <li><a href="../aluno/a-perfil.html">MENU</a></li>
+                        <li><a href="../aluno/a-config.html">CONFIGURAÇÕES</a></li>
+                        <li><a href="../home/h-home.html">SAIR</a></li>
+                    </ul>
+                </div>
+            </button>
+        </div>
+    </header>
+    <main class="conteiner">
+        <h1>Operadores Lógicos PT1</h1>
+        <section class="barra-progresso">
+            <div class="bola"></div>
+        </section>
+        <video width="100%" controls>
+            <source src="caminho-do-video.mp4" type="video/mp4">
+            <source src="caminho-do-video.ogv" type="video/ogg">
+        </video>
+        <section class="content">
+            <h2>RESUMO</h2>
+            <p class="">Nesta aula, você aprenderá sobre operadores lógicos no VisualG, que são utilizados para combinar expressões booleanas (verdadeiro ou falso).</p>
+            <ol>
+                <li class="topico"><strong>1. Operadores Lógicos no VisualG</strong>
+                    <p>No VisualG, temos três operadores principais:</p>
+                    <ul>
+                        <li>E (e) → Retorna verdadeiro apenas se ambas as expressões forem verdadeiras. 
+                            <ul class="exemplo"><li>Exemplo: verdadeiro e falso → falso</li></ul>
+                        </li>
+                        <li>OU (ou) → Retorna verdadeiro se pelo menos uma das expressões for verdadeira.
+                            <ul class="exemplo"><li>Exemplo: verdadeiro ou falso → verdadeiro</li></ul>
+                        </li>
+                        <li>NAO (nao) → Inverte o valor da expressão. 
+                            <ul class="exemplo"><li>Exemplo: não verdadeiro → falso</li></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="topico"><strong>2. Ordem de Precedência</strong>
+                    <p>A ordem de execução dos operadores segue a seguinte prioridade:</p>
+                    <ol class="ordem">
+                        <li>NAO (nao)</li>
+                        <li>E (e)</li>
+                        <li>OU (ou)</li>
+                    </ol>
+                    <p>Se necessário, podemos usar parênteses para modificar a ordem de avaliação.</p>
+                </li>
+                <li class="topico"><strong>3. Aplicação das Leis de De Morgan</strong>
+                    <p>As Leis de De Morgan ajudam a transformar expressões lógicas:</p>
+                    <div class="expressao-logica">
+                        <p>¬(X∧Y) = ¬X∨¬Y</p>
+                        <p>¬(X∨Y) = ¬X∧¬Y</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+        <section class="botao-caixa">
+            <div class="botao"><a href="../aluno/exercicio.html">SEGUINTE</a></div>
+        </section>
+    </main>
+    <script src="../../js/icon-menu.js"></script>
+</body>
+</html>

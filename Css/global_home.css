@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Fira Sans", serif;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.pesquisa {
+  border: none;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+header {
+  box-shadow: 0px 4px 20px 0px rgba(191, 172, 149, 0.7);
+  padding: 0.5rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  gap: 2rem;
+}
+
+header nav section:first-child {
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+}
+
+header nav form {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  flex: 2;
+  justify-content: center;
+}
+
+header nav section:last-child {
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+  justify-content: flex-end;
+}
+
+header nav ul a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #684a43;
+}
+
+.pesquisa input {
+  color: #00000066;
+}
+
+nav img {
+  width: 55px;
+  height: auto;
+}
+
+/* Breakpoint 1600px - ajustes sutis */
+@media (max-width: 1600px) {
+  header nav {
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+  }
+  header nav ul a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Breakpoint 1200px - redução proporcional */
+@media (max-width: 1200px) {
+  header {
+    height: 5rem;
+  }
+  header nav {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  nav img {
+    width: 45px;
+  }
+  header nav ul a {
+    font-size: 0.85rem;
+  }
+  .pesquisa {
+    padding: 8px;
+    width: 120px;
+  }
+}
+
+/* Breakpoint 800px - compactação máxima */
+@media (max-width: 800px) {
+  header {
+    height: 4.5rem;
+  }
+  header nav {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  nav img {
+    width: 40px;
+  }
+  header nav ul {
+    gap: 12px;
+  }
+  header nav ul a {
+    font-size: 0.75rem;
+  }
+  .pesquisa {
+    padding: 6px;
+    width: 100px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Breakpoint 450px - mínimos viáveis */
+@media (max-width: 450px) {
+  header {
+    height: 4rem;
+  }
+  header nav ul {
+    gap: 8px;
+  }
+  header nav ul a {
+    font-size: 0.65rem;
+  }
+  .pesquisa {
+    width: 80px;
+    padding: 4px;
+  }
+  nav img {
+    width: 35px;
+  }
+}

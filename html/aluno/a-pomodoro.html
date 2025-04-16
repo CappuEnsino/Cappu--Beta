@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/pomodoro.css" />
+    <link rel="stylesheet" href="../../css/header2.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+    <title>Pomodoro</title>
+  </head>
+  <body>
+    <header>
+      <a href="../aluno/a-minharotina.html"><img src="../../Images/voltar.svg" alt=""></a>
+      <p>MÉTODOS DE ESTUDO</p>
+      <div>
+        <p>Aluno 1</p>
+        <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
+            <img  src="../../Images/perfil.svg" alt="imagem do perfil">
+            <div class="user-config" id="userConfig">
+                <ul>
+                    <li><a href="../aluno/a-perfil.html">MENU</a></li>
+                    <li><a href="../aluno/a-alunoconfig.html">CONFIGURAÇÕES</a></li>
+                    <li><a href="../home/h-home.html">SAIR</a></li>
+                </ul>
+            </div>
+        </button>
+    </div>
+    </header>
+    <h1>POMODORO</h1>
+    <main class="conteiner">
+      <section class="caixa-form">
+        <form action="" method="post" id="meuFormulario">
+          <div class="form-group">
+            <label for="qntd-ciclos" class="info-key"
+              >QUANTIDADE DE CICLOS</label
+            >
+            <select
+              class="info-value"
+              name="qntd-ciclos"
+              id="qntd-ciclos"
+              required
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tempo-foco" class="info-key">TEMPO DE FOCO</label>
+            <select
+              class="info-value"
+              name="tempo-foco"
+              id="tempo-foco"
+              required
+            >
+              <option value="10">10min</option>
+              <option value="15">15min</option>
+              <option value="20">20min</option>
+              <option value="25">25min</option>
+              <option value="30">30min</option>
+              <option value="35">35min</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tempo-rest" class="info-key">TEMPO DE DESCANSO</label>
+            <select
+              class="info-value"
+              name="tempo-rest"
+              id="tempo-rest"
+              required
+            >
+              <option value="5">5min</option>
+              <option value="10">10min</option>
+              <option value="15">15min</option>
+              <option value="20">20min</option>
+              <option value="25">25min</option>
+              <option value="30">30min</option>
+            </select>
+          </div>
+          <div class="botao">
+            <button type="submit">INICIAR</button>
+          </div>
+        </form>
+      </section>
+      <section class="caixa-content">
+        <h2>VISUALIZAÇÃO</h2>
+        <section class="organizacao">
+          <div class="ciclo-grupo">
+            <p class="numero-ciclo">1° CICLO</p>
+            <div class="ciclo-caixa">
+              <img src="../../Images/cabeca.svg" alt="" />
+              <p>FOCO: 25 Min</p>
+            </div>
+            <div class="ciclo-caixa">
+              <img src="../../Images/cama.svg" alt="" />
+              <p>DESCANSO: 5 Min</p>
+            </div>
+          </div>
+          <div class="ciclo-grupo">
+            <p class="numero-ciclo">2° CICLO</p>
+            <div class="ciclo-caixa">
+              <img src="../../Images/cabeca.svg" alt="" />
+              <p>FOCO: 25 Min</p>
+            </div>
+            <div class="ciclo-caixa">
+              <img src="../../Images/cama.svg" alt="" />
+              <p>DESCANSO: 5 Min</p>
+            </div>
+          </div>
+          <div class="ciclo-grupo">
+            <p class="numero-ciclo">3° CICLO</p>
+            <div class="ciclo-caixa">
+              <img src="../../Images/cabeca.svg" alt="" />
+              <p>FOCO: 25 Min</p>
+            </div>
+            <div class="ciclo-caixa">
+              <img src="../../Images/cama.svg" alt="" />
+              <p>DESCANSO: 5 Min</p>
+            </div>
+          </div>
+          <div class="ciclo-grupo">
+            <p class="numero-ciclo">4° CICLO</p>
+            <div class="ciclo-caixa">
+              <img src="../../Images/cabeca.svg" alt="" />
+              <p>FOCO: 25 Min</p>
+            </div>
+            <div class="ciclo-caixa">
+              <img src="../../Images/cama.svg" alt="" />
+              <p>DESCANSO: 5 Min</p>
+            </div>
+          </div>
+          <div class="ciclo-grupo">
+            <p class="numero-ciclo">5° CICLO</p>
+            <div class="ciclo-caixa">
+              <img src="../../Images/cabeca.svg" alt="" />
+              <p>FOCO: 25 Min</p>
+            </div>
+            <div class="ciclo-caixa">
+              <img src="../../Images/cama.svg" alt="" />
+              <p>DESCANSO: 5 Min</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="../../js/icon-menu.js"></script>
+  </body>
+</html>
+
+

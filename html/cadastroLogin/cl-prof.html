@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Cappuensino</title>
+    <link rel="stylesheet" href="../../css/prof.css">
+    <link rel="stylesheet" href="../../css/header2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <button class="back-button" onclick="history.back()">
+            <img src="../../Images/voltar.svg" alt="seta">
+        </button>
+        <section class="logo-container">
+            <img src="../../Images/logo+nome.svg" alt="logo" class="logo">
+        </section>
+      </header>
+
+    <main>
+        <section class="cadastro">
+            <h2>CADASTRE-SE</h2>
+
+            
+                <form>
+                    <section class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" class="caixa" placeholder="Digite seu nome">
+                    </section>
+                
+                    <section class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" class="caixa" placeholder="Digite seu e-mail">
+                    </section>
+                
+                    <section class="campo">
+                        <label for="documento">CPF - CNPJ</label>
+                        <input type="text" id="documento" class="caixa" placeholder="Digite seu CPF ou CNPJ">
+                    </section>
+                
+                    <section class="campo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" class="caixa" placeholder="Digite sua senha">
+                    </section>
+                
+                    <section class="campo">
+                        <label for="confirmar_senha">Confirmar Senha</label>
+                        <input type="password" id="confirmar_senha" class="caixa" placeholder="Confirme sua senha">
+                    </section>
+                </form>
+
+                <section class="termos">
+                    <input type="checkbox" id="termos">
+                    <label for="termos">Eu aceito os <a href="#">Termos de Uso</a></label>
+                </section>
+                
+
+                <button type="submit" class="botao">CADASTRAR</button>
+                
+    </main>
+
+    <footer>
+        <img src="../../Images/Cappucino.svg" alt="cafe" class="cafe">
+        <p>© 2024 Cappuensino. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

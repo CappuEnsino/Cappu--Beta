@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/avaliar.css">
+    <link rel="stylesheet" href="../../css/header2.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+    <title>Avalie!</title>
+</head>
+<body>
+    <header>
+        <a href="../../html/aluno/a-todososcursos.html"><img src="../../Images/voltar.svg" alt=""></a>
+        <p>AVALIAÇÃO</p>
+        <div>
+            <p>Aluno 1</p>
+            <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
+                <img  src="../../Images/perfil.svg" alt="imagem do perfil">
+                <div class="user-config" id="userConfig">
+                    <ul>
+                        <li><a href="../../html/a-perfil.html">MENU</a></li>
+                        <li><a href="../../html/a-config.html">CONFIGURAÇÕES</a></li>
+                        <li><a href="../../html/h-home.html">SAIR</a></li>
+                    </ul>
+                </div>
+            </button>
+        </div>
+    </header>
+    <main class="container">
+        <section class="info">
+            <section class="info-coluna">
+                <p class="title">NOME</p>
+                <p class="description">Lógica de Programação</p>
+            </section>
+            <section class="info-coluna">
+                <p class="title">AUTOR</p>
+                <p class="description">Professor 1</p>
+            </section>
+            <section class="info-coluna">
+                <p class="title">DURAÇÃO</p>
+                <p class="description">8 Meses</p>
+            </section>
+        </section>
+        <section class="avaliacao">
+            <section class="rate">
+                <p class="numero">0</p>
+                <section class="estrela">
+                    <a href="#" data-value="1"><img src="../../Images/estrela.svg" alt="Avaliar com 1 estrela"></a>
+                    <a href="#" data-value="2"><img src="../../Images/estrela.svg" alt="Avaliar com 2 estrelas"></a>
+                    <a href="#" data-value="3"><img src="../../Images/estrela.svg" alt="Avaliar com 3 estrelas"></a>
+                    <a href="#" data-value="4"><img src="../../Images/estrela.svg" alt="Avaliar com 4 estrelas"></a>
+                    <a href="#" data-value="5"><img src="../../Images/estrela.svg" alt="Avaliar com 5 estrelas"></a>
+                </section>
+            </section>
+        </section>
+            <form action="">
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              placeholder="Escreva sua avaliação..."
+            ></textarea>
+            </form>
+            <section class="caixa-botao-avaliar">
+            <section class="botao-avaliar">
+                <a href="../../html/a-perfil.html">Avaliar</a>
+            </section>
+            </section>
+        </section>
+    </main>
+    <script src="../../js/icon-menu.js"></script>
+    <script src="../../js/estrelas.js"></script>
+</body>
+</html>
