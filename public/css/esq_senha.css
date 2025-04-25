@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  width: 50px;
+  height: 50px;
+}
+
+.logo {
+  width: 100%;
+  max-width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+.cadastro {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+h2 {
+  font-size: 26px;
+  color: #5d4037;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-bottom: 1px solid #684a43;
+  padding-bottom: 5px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #684a43;
+  align-self: flex-start;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+
+.aviso{
+    margin-top: 40px;
+    font-family: 'Fira Sans';
+    opacity: 0.5;
+    font-size: 0.8em;
+}
+
+.botao {
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 2px solid #684a43;
+  background-color: white;
+  color: #684a43;
+  transition: 0.3s;
+  margin-top: 60px;
+}
+
+.botao:hover {
+  background-color: #684a43;
+  color: white;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.cafe {
+  width: 26%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+footer p {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+  .logo {
+    max-width: 120px;
+  }
+  .cadastro {
+    width: 90%;
+    padding: 15px;
+  }
+  .campo {
+    width: 100%;
+  }
+  .botao {
+    width: 100%;
+  }
+  .cafe {
+    width: 26%;
+    height: auto;
+    position: static;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

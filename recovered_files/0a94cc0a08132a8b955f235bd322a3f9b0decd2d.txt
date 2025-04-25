@@ -1,0 +1,34 @@
+const express = require("express");
+const router = express.Router();
+
+// Rota para a página inicial
+router.get("/", (req, res) => {
+  res.render("pages/home/index");
+});
+
+// Rota para a página de cursos
+router.get("/cursos", (req, res) => {
+  res.render("pages/home/cursos");
+});
+
+// Rota para a página de planos
+router.get("/planos", (req, res) => {
+  res.render("pages/home/planos");
+});
+
+// Rota para a página "Sou Aluno"
+router.get("/sou-aluno", (req, res) => {
+  res.render("pages/home/sou-aluno");
+});
+
+// Rota para a página "Sou Professor"
+router.get("/sou-professor", (req, res) => {
+  res.render("pages/home/sou-professor");
+});
+
+// Rota para a página "Quem Somos"
+router.get("/quemsomos", (req, res) => {
+  res.render("pages/home/quemsomos");
+});
+
+module.exports = router;

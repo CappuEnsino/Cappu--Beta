@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #684a43;
+}
+
+body {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 26em 0 26em;
+}
+
+
+h1 {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-size: 2.75em;
+  line-height: 0.675rem;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--primary-color);
+  margin-top: 4.25rem;
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 45em;
+  margin-top: 7rem;
+  align-items: stretch;
+}
+
+.plano-caixa {
+  flex: 1;
+  overflow: hidden;
+  height: auto;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 1.25em;
+  border-bottom-left-radius: 1.25em;
+}
+
+.plano-caixa h2 {
+  font-family: Figtree;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2.5em;
+  line-height: 1em;
+  letter-spacing: 8%;
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  padding-top: 3.25rem;
+}
+
+.plano-caixa ul {
+  margin-top: 5.25em;
+}
+
+.plano-caixa ul li {
+  font-family: Fira Sans;
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 2em;
+  letter-spacing: 8%;
+  list-style: "✔";
+}
+
+.info-caixa {
+  flex: 1;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  border-top-right-radius: 1.25em;
+  border-bottom-right-radius: 1.25em;
+  height: auto;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 0 2.5em 0 2.5em;
+  overflow: hidden;
+}
+
+.info-caixa h2 {
+  font-family: Figtree;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2.5em;
+  line-height: 1em;
+  letter-spacing: 8%;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  padding-top: 3.25rem;
+}
+
+.info-preco {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-cobranca {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.info-key {
+  font-family: Figtree;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.info-value {
+  font-family: Figtree;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.gerenciar-botao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.gerenciar-botao a {
+  text-decoration: none;
+  font-family: Figtree;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+  height: 2em;
+  padding: 1em 2em;
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 1.8em;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancelar-plano-botao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6em;
+}
+
+.cancelar-plano-botao a {
+  text-decoration: none;
+  font-family: Figtree;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1em;
+  line-height: 1em;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #ffffff;
+  padding: 1em 1em;
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 1.8em;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12.5rem;
+  height: 2em;
+}
+
+@media (max-width: 1600px) {
+  body {
+    margin: 0 15em 0 15em;
+  }
+
+  .conteiner {
+    height: auto;
+  }
+
+  .plano-caixa h2,
+  .info-caixa h2 {
+    font-size: 2.25em;
+  }
+
+  .plano-caixa ul li {
+    font-size: 1.125em;
+  }
+
+  .info-key,
+  .info-value {
+    font-size: 1.375em;
+  }
+
+  .gerenciar-botao a {
+    width: 30rem;
+  }
+
+  .cancelar-plano-botao {
+    padding-bottom: 1em;
+  }
+
+  .cancelar-plano-botao a {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    margin: 0 10em 0 10em;
+  }
+
+  .conteiner {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .plano-caixa,
+  .info-caixa {
+    width: 100%;
+    border-radius: 1.25em;
+    margin-bottom: 2em;
+  }
+
+  .plano-caixa {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 1em;
+    margin-bottom: 0;
+  }
+
+  .info-caixa {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .gerenciar-botao a {
+    width: 40rem; /* Reduz a largura do botão */
+    font-size: 0.875em;
+  }
+
+  .cancelar-plano-botao {
+    padding-bottom: 1em;
+  }
+
+  .cancelar-plano-botao a {
+    width: 14em; /* Reduz a largura do botão de cancelar */
+    font-size: 1em; /* Reduz o tamanho da fonte */
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    margin: 0 5em 0 5em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .plano-caixa {
+    padding-bottom: 2em;
+    margin-bottom: 0;
+  }
+
+  .plano-caixa h2,
+  .info-caixa h2 {
+    font-size: 2em;
+  }
+
+  .plano-caixa ul li {
+    font-size: 1em;
+  }
+
+  .info-key,
+  .info-value {
+    font-size: 1.25em;
+  }
+
+  .gerenciar-botao a {
+    font-size: 1em;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cancelar-plano-botao {
+    padding-bottom: 1em;
+  }
+  .cancelar-plano-botao a {
+    font-size: 0.875em;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    margin: 0 2em 0 2em;
+  }
+
+  h1 {
+    font-size: 1.75em;
+  }
+
+  .plano-caixa {
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+  }
+
+  .plano-caixa h2,
+  .info-caixa h2 {
+    font-size: 1.75em;
+  }
+
+  .plano-caixa ul li {
+    font-size: 0.875em;
+    padding-bottom: 0.75em;
+  }
+
+  .info-key,
+  .info-value {
+    font-size: 1em;
+  }
+
+  .gerenciar-botao a {
+    font-size: 0.9em;
+    padding: 0.75em 1.5em;
+    width: 20rem;
+  }
+
+  .cancelar-plano-botao {
+    padding-bottom: 1em;
+    display: flex;
+    gap: 2em;
+    flex-direction: row;
+    width: 100%;
+  }
+  .cancelar-plano-botao a {
+    font-size: 0.75rem;
+    padding: 0.75em 1.5em;
+    height: auto;
+  }
+}

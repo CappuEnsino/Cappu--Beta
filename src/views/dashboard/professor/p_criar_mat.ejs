@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRIAR MATERIAL</title>
+    <link rel="stylesheet" href="/css/p_cria_material.css" />
+    <link rel="stylesheet" href="/css/header2.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="/dashboard/professor/aula/<%= aula.id %>"
+        ><img src="/images/voltar.svg" alt=""
+      /></a>
+      <p>CRIAR MATERIAL</p>
+      <div>
+        <p><%= user.name %></p>
+        <button
+          class="user-icon"
+          id="userIcon"
+          aria-label="Abrir menu do usuário"
+        >
+          <img src="/images/perfil.svg" alt="imagem do perfil" />
+          <div class="user-config" id="userConfig">
+            <ul>
+              <li><a href="/dashboard/professor">MENU</a></li>
+              <li><a href="/dashboard/professor/config">CONFIGURAÇÕES</a></li>
+              <li><a href="/">SAIR</a></li>
+            </ul>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <div class="container">
+      <form
+        action="/dashboard/professor/material/save"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <input type="hidden" name="curso_id" value="<%= curso.id %>" />
+        <input type="hidden" name="aula_id" value="<%= aula.id %>" />
+
+        <div class="form-group">
+          <label for="nome">NOME DO MATERIAL</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">TIPO DE MATERIAL</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecione...</option>
+            <option value="pdf">PDF</option>
+            <option value="video">Vídeo</option>
+            <option value="link">Link</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="arquivo-group">
+          <label for="arquivo">ARQUIVO</label>
+          <input type="file" id="arquivo" name="arquivo" />
+        </div>
+
+        <div class="form-group" id="url-group" style="display: none">
+          <label for="url">URL</label>
+          <input type="url" id="url" name="url" />
+        </div>
+
+        <button type="submit" class="salvar">
+          SALVAR <img src="/images/save_gere.png" alt="Salvar" />
+        </button>
+      </form>
+    </div>
+
+    <script src="/js/icon-menu.js"></script>
+    <script src="/js/material.js"></script>
+  </body>
+</html>

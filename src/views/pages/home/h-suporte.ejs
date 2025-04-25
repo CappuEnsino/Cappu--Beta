@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cappuensino - Suporte</title>
+    <link rel="stylesheet" href="/css/suporte.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <section>
+          <a href="/"><img src="/images/logo.png" alt="Logo Cappuensino" /></a>
+        </section>
+        <form action="">
+          <input
+            class="pesquisa"
+            type="search"
+            placeholder="Pesquise por cursos..."
+          />
+        </form>
+        <ul>
+          <li><a href="/quemsomos">Sobre</a></li>
+          <li><a href="/cursos">Cursos</a></li>
+          <li><a href="/planos">Planos</a></li>
+          <li><a href="/sou-aluno">Aluno</a></li>
+          <li><a href="/sou-professor">Professor</a></li>
+        </ul>
+        <section>
+          <a href="/auth/selecao-perfil"
+            ><img src="/images/login.png" alt="Login"
+          /></a>
+        </section>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container">
+        <section class="infos">
+          <h1>Nome Completo</h1>
+          <input
+            type="text"
+            placeholder="Digite seu nome aqui..."
+            class="input-1"
+          />
+          <h1>E-mail</h1>
+          <input
+            type="text"
+            placeholder="Digite seu E-mail aqui..."
+            class="input-1"
+          />
+          <h1>Sua Mensagem</h1>
+          <textarea
+            name="mensagem"
+            id="msg"
+            placeholder="Digite o que está acontecendo..."
+          ></textarea>
+          <button id="enviar">enviar</button>
+        </section>
+        <section>
+          <img
+            src="/images/contate-nos.svg"
+            alt="Contate-nos escrito em cores análogas e uma imagem de megafone"
+            id="contat"
+          />
+        </section>
+      </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+  </body>
+</html>

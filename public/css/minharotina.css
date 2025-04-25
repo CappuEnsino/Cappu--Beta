@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #684a43;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin-left: 8em;
+  margin-right: 8em;
+  margin-top: 8em;
+  padding-top: 7rem;
+}
+
+.rotina {
+  display: flex;
+  flex: 1;
+  width: 50%;
+  border-right: 1px solid #000000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.rotina img {
+  width: 70%;
+  height: auto;
+}
+
+.rotina a {
+  text-decoration: none;
+  color: var(--primary-color);
+  display: flex;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 2.8125em;
+  align-self: center;
+
+}
+
+.metodos {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 3em;
+  justify-content: space-between;
+}
+
+.metodos a {
+  text-decoration: none;
+  color: var(--primary-color);
+  display: inline-flex;
+  border: 1px solid #000000;
+  border-radius: 3rem;
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.25rem;
+  letter-spacing: 0%;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 50%;
+  height: 2.8125em;
+}
+
+.tecnica {
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+  align-items: center;
+}
+
+.tecnica h2 {
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 9.6px;
+  letter-spacing: 0%;
+}
+
+.tecnica p {
+  font-family: Fira Sans;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 7.2px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 5em;
+  align-items: center;
+}
+
+.icons a{
+  border: none;
+  
+}
+
+
+@media (max-width: 1600px) {
+  .conteiner {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+
+  .rotina a,
+  .metodos a {
+    width: 60%;
+    font-size: 1.1rem;
+  }
+
+  .tecnica h2 {
+    font-size: 28px;
+  }
+
+  .tecnica p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .conteiner {
+    margin-left: 2em;
+    margin-right: 2em;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .rotina,
+  .metodos {
+    width: 100%;
+    border-right: none;
+    padding-left: 0;
+  }
+
+  .metodos{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .rotina a,
+  .metodos a {
+    width: 70%;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .tecnica h2 {
+    font-size: 24px;
+  }
+
+  .tecnica p {
+    font-size: 18px;
+  }
+
+  .icons {
+    gap: 3em;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .conteiner {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 4em;
+  }
+
+  .rotina a,
+  .metodos a {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+
+  .tecnica h2 {
+    font-size: 20px;
+  }
+
+  .tecnica p {
+    font-size: 16px;
+  }
+
+  .icons {
+    gap: 2em;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .conteiner {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 2em;
+  }
+
+  .rotina a,
+  .metodos a {
+    width: 90%;
+    font-size: 0.8rem;
+    height: 2.5em;
+  }
+
+  .tecnica h2 {
+    font-size: 18px;
+  }
+
+  .tecnica p {
+    font-size: 14px;
+  }
+
+  .icons {
+    gap: 1em;
+  }
+}

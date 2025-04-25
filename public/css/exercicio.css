@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #684a43;
+}
+
+body {
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#questions-container {
+  width: 60%;
+  margin-top: 10rem;
+}
+
+.question-container {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  display: none;
+  width: 100%;
+  box-shadow: 0px 0px 10px 5px rgba(191, 172, 149, 0.7);
+  border-radius: 2rem;
+}
+
+.question-container.active {
+  display: block;
+}
+
+h2 {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--primary-color);
+  margin-top: 3%;
+}
+
+h3 {
+  font-family: Fira Sans;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-top: 3%;
+}
+
+/* Container das opções - agora usando FLEXBOX */
+.options-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+/* Estilo das opções */
+.option {
+  font-family: Fira Sans;
+  flex: 1 1 calc(50% - 1rem);
+  box-sizing: border-box;
+  padding: 12px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 2px rgba(191, 172, 149, 0.7);
+  font-weight: 400;
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+  border-color: #bbb;
+}
+
+.option.correct {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.option.incorrect {
+  background-color: rgba(172, 38, 38, 0.5);
+  color: white;
+  border-color: #f44336;
+}
+
+/* Feedback */
+.feedback {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  display: none;
+}
+
+.feedback.show {
+  display: block;
+}
+
+.feedback.correct-feedback {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border-left: 4px solid #4caf50;
+}
+
+.completion-button {
+    display: none;
+    margin: 3rem auto;
+    padding: 1.5rem 3rem;
+    background-color: var(--primary-color);
+    width: 25%;
+    color: white;
+    border: none;
+    border-radius: 3rem;
+    font-family: Fira Sans;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(104, 74, 67, 0.3);
+    transition: all 0.3s;
+  }
+
+  .completion-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(104, 74, 67, 0.4);
+  }
+
+  .completion-button.show {
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    .option {
+      flex: 1 1 100%;
+    }
+    #questions-container {
+      width: 90%;
+    }
+  }
+
+h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+

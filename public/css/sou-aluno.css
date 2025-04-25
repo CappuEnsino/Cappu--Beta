@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #684a43;
+    --second-color: #BFAC95;
+    --text-color: #333;
+    --white: #fff;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==================== ANIMAÇÕES ==================== */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== SEÇÃO 1 ==================== */
+/* Gradiente Section with Animation */
+#gradiente {
+    background-image: linear-gradient(to bottom, var(--second-color), var(--white));
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.pg1-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 10rem 2rem 20rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-out;
+}
+
+.pg1-container img {
+    width: 30rem;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+.pg1-container img:hover {
+    transform: scale(1.03);
+}
+
+#txt-pg1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.pg1-container h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.pg1-container h2 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    max-width: 350px;
+    letter-spacing: 1px;
+}
+
+
+#botao {
+    display: inline-block; /* Mudei de flex para inline-block para centralização mais fácil */
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(104, 74, 67, 0.3);
+    border: 1px solid var(--primary-color);
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+    left: 42%;
+    transform: translateX(-50%);
+    margin: 2rem 0;
+    margin-top: -2rem;
+}
+
+#botao:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 6px 16px rgba(104, 74, 67, 0.4);
+    animation-play-state: paused; /* Pausa a animação no hover */
+}
+
+/* ==================== SEÇÃO 2 ==================== */
+.section-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--primary-color);
+    margin: 4rem 0 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 1rem auto;
+}
+
+.pg2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5rem auto 20rem;
+    gap: 5rem;
+    padding: 0 2rem;
+    max-width: 1400px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.pg2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 250px;
+    gap: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.pg2:hover {
+    transform: translateY(-10px);
+}
+
+.pg2 h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.circulo {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.circulo:hover {
+    box-shadow: 0px 0px 60px 15px rgba(178, 134, 123, 0.3);
+}
+
+.circulo img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.circulo:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ==================== SEÇÃO 3 ==================== */
+.pg3-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rem;
+    padding: 0 2rem;
+    flex-direction: row;
+    gap: 5rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#vem {
+    width: 30rem;
+    height: auto;
+    animation: float 4s ease-in-out infinite 0.5s;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+#vem:hover {
+    transform: scale(1.03);
+}
+
+#div-container {
+    display: flex;
+    background-color: var(--background-color);
+    box-shadow: 0px 0px 50px 10px rgba(178, 134, 123, 0.5);
+    border-radius: 3rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#div-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 60px 15px rgba(178, 134, 123, 0.6);
+}
+
+#div1 {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#div1 h1 {
+    font-weight: 900;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: left;
+    max-width: 300px;
+    line-height: 1.3;
+}
+
+#div1 p {
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    max-width: 250px;
+}
+
+#div2 img {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+}
+
+#div2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#div2 #curso {
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 18rem;
+    border-radius: 50px;
+    background: var(--white); /* Fundo branco */
+    color: var(--primary-color); /* Texto marrom */
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: 2px solid var(--primary-color); /* Borda marrom */
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    box-shadow: 0 4px 15px rgba(104, 74, 67, 0.2); /* Sombra mais suave */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#div2 #curso::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color); /* Fundo marrom no hover */
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+#div2 #curso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(104, 74, 67, 0.3);
+    color: var(--primary-color); /* Texto branco no hover */
+    border-color: #684a43; /* Remove borda no hover */
+}
+
+#div2 #inflame:hover::before {
+    left: 0;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 1600px) {
+    .pg1-container {
+        gap: 3rem;
+        padding: 8rem 2rem 15rem;
+    }
+    
+    .pg1-container img {
+        width: 25rem;
+    }
+    
+    .pg2-container {
+        margin: 4rem auto 15rem;
+        gap: 4rem;
+    }
+    
+    #div-container {
+        transform: scale(0.95);
+    }
+    
+    #vem {
+        width: 25rem;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .pg1-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 5rem 2rem 10rem;
+    }
+    
+    #txt-pg1 {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .pg1-container h1, 
+    .pg1-container h2 {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .pg2-container {
+        margin: 3rem auto 10rem;
+        gap: 3rem;
+    }
+    
+    .pg3-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    #vem {
+        width: 25rem;
+        margin-bottom: 0;
+    }
+    
+    #div-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .pg1-container h1 {
+        font-size: 2rem;
+    }
+    
+    .pg1-container h2 {
+        font-size: 1rem;
+    }
+    
+    .pg1-container img {
+        width: 20rem;
+    }
+    
+    .pg2 {
+        gap: 2rem;
+    }
+    
+    .circulo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .circulo img {
+        width: 80px;
+    }
+    
+    #div-container {
+        flex-direction: column;
+    }
+    
+    #div1 {
+        padding: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #div1 h1 {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    #div1 p {
+        max-width: 100%;
+    }
+    
+    #div2 img {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    #vem {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .pg1-container {
+        padding: 3rem 1rem 5rem;
+    }
+    
+    .pg1-container img {
+        width: 15rem;
+    }
+    
+    .pg1-container h1 {
+        font-size: 1.5rem;
+    }
+    
+    .pg2-container {
+        gap: 2rem;
+        margin: 2rem auto 5rem;
+    }
+    
+    .pg2 {
+        max-width: 150px;
+    }
+    
+    .pg2 h3 {
+        font-size: 1.2rem;
+    }
+    
+    .circulo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .circulo img {
+        width: 60px;
+    }
+    
+    #vem {
+        width: 15rem;
+    }
+    
+    #div1 h1 {
+        font-size: 1.5rem;
+    }
+    
+    #div2 #curso {
+        width: 150px;
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin: 3rem 0 1rem;
+    }
+
+
+    #gradiente {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza horizontalmente todos os itens filhos */
+        padding-bottom: 2rem;
+    }
+
+    #botao {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        margin: 1.5rem auto; /* Centraliza com margem automática */
+        max-width: 170px;
+        display: block; /* Fundamental para margin:auto funcionar */
+        text-align: center; /* Centraliza o texto dentro do botão */
+        left: auto; /* Remove o posicionamento relativo anterior */
+        transform: none; /* Remove transformações anteriores */
+    }
+    
+    #div-container {
+        padding: 1rem;
+        border-radius: 2rem;
+        background-size: 90% auto; /* Largura 90%, altura automática */
+        background-position: center 20%; 
+    }
+    
+}

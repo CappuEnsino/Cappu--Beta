@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #684a43;
+  --second-color: #bfac95;
+  --text-color: #333;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --dark-gray: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 16px; /* Base para medidas em rem */
+  background: linear-gradient(180deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #664d3b;
+  font-size: 1.5rem; /* 24px em rem */
+  padding: 0.5rem; /* 8px em rem */
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #664d3b;
+  font-weight: bold;
+  font-size: 1.0rem; /* 19.2px em rem */
+}
+
+.cadastro {
+  max-width: 37.5rem; /* 600px em rem */
+  margin: auto;
+  padding: 1.25rem; /* 20px em rem */
+  text-align: center;
+  flex-grow: 1;
+  padding-top: 10rem;
+}
+
+h2 {
+  margin-top: 3rem;
+  font-size: 1.8rem; /* 26px em rem */
+  color: #5d4037;
+  margin-bottom: 0.625rem; /* 10px em rem */
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 120%;
+  max-width: 39.5rem; /* 600px em rem */
+  margin-top: 1.75rem; /* 60px em rem */
+  border-bottom: 1px solid #684a43;
+  padding-bottom: 0.3125rem; /* 5px em rem */
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #684a43;
+  align-self: flex-start;
+  margin-bottom: 0.9rem; /* 5px em rem */
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  margin-right: 2rem;
+}
+
+input {
+  padding: 0.9rem 0; /* 8px em rem */
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.botao {
+  padding: 0.625rem; /* 10px em rem */
+  width: 80%;
+  max-width: 18.75rem; /* 300px em rem */
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 1.875rem; /* 30px em rem */
+  border: 0.125rem solid #684a43; /* 2px em rem */
+  background-color: white;
+  color: #684a43;
+  transition: 0.3s;
+  margin-top: 3.75rem; /* 60px em rem */
+}
+
+.botao:hover {
+  background-color: #684a43;
+  color: white;
+}
+
+.senha {
+  margin-top: 2rem; /* 30px em rem */
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  color: #684a43;
+  font-size: 20px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.cad {
+  margin-top: 0.625rem; /* 10px em rem */
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  color: #684a43;
+  font-size: 20px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  position: relative;
+  background-color: #684a43;
+}
+
+.cafe {
+  width: 26%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+footer p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+/* Responsividade para 1600px */
+@media (max-width: 100rem) {
+  /* 1600px em rem */
+  .cadastro {
+    max-width: 50rem; /* 800px em rem */
+  }
+
+  h2 {
+    font-size: 2rem; /* 32px em rem */
+  }
+
+  .botao {
+    width: 70%;
+  }
+
+  .cafe {
+    width: 20%;
+  }
+
+  footer p {
+    font-size: 10px;
+    left: 55%;
+  }
+}
+
+/* Responsividade para 1200px */
+@media (max-width: 75rem) {
+  /* 1200px em rem */
+  .header {
+    padding: 1.5rem;
+  }
+  .back-button {
+    font-size: 1.3rem;
+  }
+  .logo {
+    font-size: 0.8rem;
+  }
+  .cadastro {
+    max-width: 45rem; /* 720px em rem */
+  }
+
+  h2 {
+    font-size: 1.8rem; /* 28.8px em rem */
+  }
+
+  .botao {
+    width: 80%;
+  }
+}
+
+/* Responsividade para 800px */
+@media (max-width: 50rem) {
+  /* 800px em rem */
+  .header {
+    padding: 1.2rem;
+  }
+  .back-button {
+    font-size: 1.1rem;
+    padding: 0.3rem;
+  }
+  .logo {
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+  }
+
+  .cadastro {
+    max-width: 35rem;
+    padding: 1rem; /* 16px em rem */
+  }
+
+  .campo {
+    width: 100%;
+  }
+
+  .botao {
+    width: 90%;
+  }
+
+  .cafe {
+    width: 30%;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsividade para 450px */
+@media (max-width: 28.125rem) {
+  /* 450px em rem */
+  .header {
+    padding: 1rem;
+  }
+  .back-button {
+    font-size: 1rem;
+  }
+  .logo {
+    font-size: 0.6rem;
+    width: 70%; /* Reduz a largura para evitar sobreposição */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cadastro {
+    max-width: 25rem;
+    padding-top: 8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem; /* 22.4px em rem */
+  }
+
+  .botao {
+    width: 100%;
+  }
+
+  .cafe {
+    width: 40%;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+  background-color: var(--gray);
+}
+
+.login-box {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box h1 {
+  font-family: "Figtree", sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--second-color);
+  border-radius: 0.5rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.remember-me input {
+  margin-right: 0.5rem;
+}
+
+.remember-me label {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: var(--second-color);
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.forgot-password a {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: var(--second-color);
+}
+
+.register-links {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.register-links p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.register-links a {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.register-links a:hover {
+  color: var(--second-color);
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 1.5rem;
+  }
+
+  .login-box h1 {
+    font-size: 1.5rem;
+  }
+}
