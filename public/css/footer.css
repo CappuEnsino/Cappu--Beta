@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  background-image: url("/Images/teste.svg");
+  width: 100%;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.organizacao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 9rem;
+  padding-top: 10rem;
+}
+
+.aquilink {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2.25rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.caixa-das-sociais {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.siga {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.sociais {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: row;
+}
+
+.sociais img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.625rem;
+}
+
+.footer-options {
+  display: flex;
+  gap: 6.625rem;
+  margin-left: 0;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.servicos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+.servicos a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footerstrong {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.direitos {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 3rem;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 4rem;
+}
+
+.termos {
+  width: 100%;
+  display: flex;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  justify-content: space-evenly;
+  align-self: flex-end;
+}
+
+.termos a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 1600px) {
+  .organizacao {
+    padding: 0 6rem;
+    padding-top: 8rem;
+  }
+
+  .footer-options {
+    gap: 4rem;
+  }
+
+  .sociais {
+    gap: 2rem;
+  }
+
+  .sociais img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .aquilink {
+    font-size: 2rem;
+  }
+
+  .siga {
+    font-size: 1.25rem;
+  }
+
+  .servicos,
+  .footerstrong,
+  .termos {
+    font-size: 1.25rem;
+  }
+
+  .direitos {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .organizacao {
+    padding: 0 4rem;
+    padding-top: 6rem;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .footer-options {
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .sociais {
+    gap: 1.5rem;
+  }
+
+  .sociais img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .aquilink {
+    font-size: 1.75rem;
+  }
+
+  .siga {
+    font-size: 1.125rem;
+  }
+
+  .servicos,
+  .footerstrong,
+  .termos {
+    font-size: 1.125rem;
+  }
+
+  .direitos {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 800px) {
+  footer {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .organizacao {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    padding-top: 4rem;
+    gap: 2rem;
+  }
+
+  .caixa-das-sociais {
+    align-items: center;
+  }
+
+  .footer-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .servicos {
+    align-items: center;
+    width: 100%;
+  }
+
+  .sociais {
+    gap: 1rem;
+  }
+
+  .sociais img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .aquilink {
+    font-size: 1.5rem;
+  }
+
+  .siga {
+    font-size: 1rem;
+  }
+
+  .servicos,
+  .footerstrong,
+  .termos {
+    font-size: 1rem;
+  }
+
+  .direitos {
+    font-size: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .termos {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .organizacao {
+    padding: 0 1rem;
+    padding-top: 2rem;
+    gap: 1.5rem;
+  }
+
+  .footer-options {
+    gap: 1.5rem;
+  }
+
+  .sociais {
+    gap: 0.75rem;
+  }
+
+  .sociais img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .aquilink {
+    font-size: 1.25rem;
+  }
+
+  .siga {
+    font-size: 0.875rem;
+  }
+
+  .servicos,
+  .footerstrong,
+  .termos {
+    font-size: 0.875rem;
+  }
+
+  .termos {
+    gap: 0.75rem;
+  }
+
+  .direitos {
+    font-size: 0.625rem;
+    margin-top: 1.5rem;
+  }
+}

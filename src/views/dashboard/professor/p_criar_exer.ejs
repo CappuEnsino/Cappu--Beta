@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRIAR EXERCÍCIO</title>
+    <link rel="stylesheet" href="/css/p_criar_exercicio.css" />
+    <link rel="stylesheet" href="/css/header2.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="/dashboard/professor"><img src="/images/voltar.svg" alt="" /></a>
+      <p>CRIAR EXERCÍCIO</p>
+      <div>
+        <p><%= user.name %></p>
+        <button
+          class="user-icon"
+          id="userIcon"
+          aria-label="Abrir menu do usuário"
+        >
+          <img src="/images/perfil.svg" alt="imagem do perfil" />
+          <div class="user-config" id="userConfig">
+            <ul>
+              <li><a href="/dashboard/professor">MENU</a></li>
+              <li><a href="/dashboard/professor/config">CONFIGURAÇÕES</a></li>
+              <li><a href="/">SAIR</a></li>
+            </ul>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <div class="container">
+      <form action="/dashboard/professor/exercicio/save" method="POST">
+        <input type="hidden" name="curso_id" value="<%= curso.id %>" />
+        <input type="hidden" name="aula_id" value="<%= aula.id %>" />
+
+        <div class="left">
+          <h1>DETALHES DO EXERCÍCIO</h1>
+
+          <div class="form-group">
+            <label for="enunciado">ENUNCIADO</label>
+            <textarea id="enunciado" name="enunciado" required>
+<%= exercicio.enunciado || '' %></textarea
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="alternativas">ALTERNATIVAS</label>
+            <div class="alternativas-container">
+              <% for(let i = 0; i < 5; i++) { %>
+              <div class="alternativa">
+                <input type="radio" name="correta" value="<%= i %>" <%= i === 0
+                ? 'checked' : '' %>>
+                <input
+                  type="text"
+                  name="alternativas[]"
+                  placeholder="Alternativa <%= i + 1 %>"
+                  required
+                />
+              </div>
+              <% } %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="explicacao">EXPLICAÇÃO</label>
+            <textarea id="explicacao" name="explicacao">
+<%= exercicio.explicacao || '' %></textarea
+            >
+          </div>
+        </div>
+
+        <div class="right">
+          <h1>MATERIAIS</h1>
+          <div class="materiais">
+            <% exercicio.materiais.forEach(function(material) { %>
+            <div class="material">
+              <h3><%= material.nome %></h3>
+              <p><%= material.tipo %></p>
+              <div class="acoes">
+                <a href="<%= material.url %>">
+                  <img src="/images/icon_pesquisa.png" alt="Visualizar" />
+                </a>
+                <a
+                  href="/dashboard/professor/exercicio/<%= exercicio.id %>/material/<%= material.id %>/delete"
+                >
+                  <img src="/images/icon_delete.png" alt="Excluir" />
+                </a>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+          <div class="add-material">
+            <a
+              href="/dashboard/professor/exercicio/<%= exercicio.id %>/material/upload"
+            >
+              <img src="/images/icon_mais.png" alt="Adicionar material" />
+            </a>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="materiais">MATERIAIS DE APOIO</label>
+          <div class="materiais-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>TÍTULO</th>
+                  <th>TIPO</th>
+                  <th>AÇÕES</th>
+                </tr>
+              </thead>
+              <tbody id="materiaisTable">
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      name="materiais[0][titulo]"
+                      placeholder="Título"
+                      required
+                    />
+                  </td>
+                  <td>
+                    <select name="materiais[0][tipo]" required>
+                      <option value="">Selecione...</option>
+                      <option value="video">Vídeo</option>
+                      <option value="texto">Texto</option>
+                      <option value="link">Link</option>
+                    </select>
+                  </td>
+                  <td>
+                    <button type="button" class="remover-material">
+                      Remover
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button type="button" id="adicionarMaterial">
+              Adicionar Material
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="salvar">
+          SALVAR <img src="/images/save_gere.png" alt="Salvar" />
+        </button>
+      </form>
+    </div>
+
+    <script src="/js/icon-menu.js"></script>
+    <script src="/js/criar_exercicio.js"></script>
+  </body>
+</html>

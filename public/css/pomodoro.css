@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #684a43;
+}
+
+body {
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+}
+
+h1 {
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2.5rem;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--primary-color);
+  padding-top: 9rem;
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 90%;
+  margin-top: 6rem;
+}
+
+.caixa-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin: 2rem;
+  gap: 0.5rem;
+}
+
+.info-key {
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2rem;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--primary-color);
+}
+
+.info-value {
+  font-family: Fira Sans;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.25rem;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  width: 12%;
+  border: 2px solid black;
+}
+
+.botao {
+  width: 100%;
+  margin-top: 13rem;
+}
+
+button {
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 3rem;
+  width: 25%;
+  height: 3rem;
+}
+
+.caixa-content {
+  width: 50%;
+  background-color: gren;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.ciclo-grupo {
+  display: flex;
+  gap: 4rem;
+}
+
+.organizacao {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+}
+
+h2 {
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2rem;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--primary-color);
+}
+
+.numero-ciclo {
+  font-family: Fira Sans;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.25rem;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #000000;
+}
+
+.ciclo-caixa {
+  display: flex;
+  width: 25rem;
+  height: 3.125rem;
+  box-shadow: 0px 0px 20px 0px rgba(191, 172, 149, 0.7);
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.ciclo-caixa p {
+  font-family: Fira Sans;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.25rem;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #000000;
+}
+
+.ciclo-caixa img {
+  width: 1.5rem;
+  height: auto;
+}
+
+@media (max-width: 1600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .info-key {
+    font-size: 1.8rem;
+  }
+
+  .info-value {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 18px;
+    width: 30%;
+  }
+
+  .ciclo-caixa {
+    width: 22rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .info-key {
+    font-size: 1.6rem;
+  }
+
+  .info-value {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 16px;
+    width: 35%;
+  }
+
+  .ciclo-caixa {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .conteiner {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .caixa-form,
+  .caixa-content {
+    width: 90%;
+    margin-top: 1.5rem;
+  }
+
+  .botao {
+    margin-top: 5rem;
+  }
+
+  button {
+    width: 50%;
+  }
+
+  .ciclo-grupo {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .ciclo-caixa {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 2.5rem;
+    font-family: Fira Sans;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+  }
+
+  .info-key {
+    font-size: 1.4rem;
+  }
+
+  .info-value {
+    font-size: 0.9rem;
+    width: 20%;
+  }
+
+  .botao {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    width: 70%;
+    font-size: 14px;
+  }
+
+  .caixa-content {
+    margin-top: 4rem;
+  }
+
+  .ciclo-caixa {
+    height: 2.5rem;
+  }
+
+  .ciclo-caixa p {
+    font-size: 1rem;
+  }
+
+  .ciclo-caixa img {
+    width: 1.2rem;
+  }
+}

@@ -1,0 +1,42 @@
+const sequelize = require("../config/database");
+const User = require("./User");
+const Curso = require("./Curso");
+const Aula = require("./Aula");
+const Exercicio = require("./Exercicio");
+const Material = require("./Material");
+const Resumo = require("./Resumo");
+
+// Relacionamentos
+User.hasMany(Curso, { foreignKey: "professor_id" });
+Curso.belongsTo(User, { foreignKey: "professor_id" });
+
+Curso.hasMany(Aula, { foreignKey: "curso_id" });
+Aula.belongsTo(Curso, { foreignKey: "curso_id" });
+
+Aula.hasMany(Exercicio, { foreignKey: "aula_id" });
+Exercicio.belongsTo(Aula, { foreignKey: "aula_id" });
+
+Aula.hasMany(Material, { foreignKey: "aula_id" });
+Material.belongsTo(Aula, { foreignKey: "aula_id" });
+
+User.hasMany(Resumo, { foreignKey: "aluno_id" });
+Resumo.belongsTo(User, { foreignKey: "aluno_id" });
+
+// Sincroniza os modelos com o banco de dados SQLite
+sequelize
+  .sync({ force: true })
+  .then(() => {
+    console.log("Banco de dados SQLite sincronizado com sucesso");
+  })
+  .catch((err) => {
+    console.error("Erro ao sincronizar banco de dados SQLite:", err);
+  });
+
+module.exports = {
+  User,
+  Curso,
+  Aula,
+  Exercicio,
+  Material,
+  Resumo,
+};

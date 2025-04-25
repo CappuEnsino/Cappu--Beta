@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #684a43;
+}
+
+body {
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteiner {
+  display: flex;
+  padding-top: 7rem;
+  flex-direction: column;
+  width: 70%;
+  gap: 4rem;
+}
+
+.conteiner h1 {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-size: 2.25rem;
+  line-height: 30%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--primary-color);
+  padding-top: 4rem;
+}
+
+video {
+  margin-top: 2rem;
+}
+.barra-progresso {
+  border: 4px solid #3b7bb4;
+  border-radius: 3em;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 6rem;
+}
+
+.bola {
+  background-color: #3b7bb4;
+  height: 100%;
+  width: 3rem;
+  border-radius: 3rem;
+}
+
+.content {
+  box-shadow: 0px 0px 10px 5px #bfac95b2;
+  padding: 3.5rem;
+  border-radius: 3rem;
+  height: auto;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.content h2 {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+  padding-top: 1rem;
+}
+
+.content p {
+  font-family: Fira Sans;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 200%;
+  letter-spacing: 0%;
+}
+
+ol {
+  list-style: none;
+}
+
+.ordem {
+  list-style: decimal;
+  padding-left: 3rem;
+}
+
+ul {
+  font-family: Fira Sans;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 200%;
+  letter-spacing: 0%;
+  padding-left: 1.75rem;
+  list-style: circle;
+}
+
+.topico {
+  font-family: Fira Sans;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-top: 2rem;
+}
+
+.exemplo {
+  font-family: Fira Sans;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.expressao-logica {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expressao-logica p {
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0%;
+}
+
+.botao-caixa {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.botao {
+  background: #00549dc4;
+  width: 20rem;
+  height: 3.75rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.botao a {
+  text-decoration: none;
+  color: white;
+  font-family: Fira Sans;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@media (max-width: 1600px) {
+  .conteiner {
+    width: 80%;
+    padding-top: 5rem;
+  }
+  
+  .content {
+    padding: 3rem;
+  }
+}
+
+/* Até 1200px */
+@media (max-width: 1200px) {
+  .conteiner {
+    width: 85%;
+    gap: 3rem;
+    padding-top: 4rem;
+  }
+  
+  .content {
+    padding: 2.5rem;
+  }
+  
+  .content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
+  }
+  
+  .content p, ul {
+    font-size: 1.1rem;
+  }
+  
+  .botao {
+    width: 18rem;
+    height: 3.5rem;
+  }
+  
+  .botao a {
+    font-size: 1.3rem;
+  }
+}
+
+/* Até 800px */
+@media (max-width: 800px) {
+  .conteiner {
+    width: 90%;
+    padding-top: 3rem;
+    gap: 2.5rem;
+  }
+  
+  .conteiner h1 {
+    font-size: 2rem;
+    padding-top: 3rem;
+  }
+  
+  .content {
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .content p, ul {
+    font-size: 1rem;
+    line-height: 180%;
+  }
+  
+  .ordem {
+    padding-left: 2rem;
+  }
+  
+  .barra-progresso {
+    margin-top: 4rem;
+    height: 2rem;
+  }
+  
+  .botao {
+    width: 16rem;
+    height: 3rem;
+  }
+  
+  .botao a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Até 450px */
+@media (max-width: 450px) {
+  .conteiner {
+    width: 95%;
+    padding-top: 2rem;
+    gap: 2rem;
+  }
+  
+  .conteiner h1 {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    line-height: 120%;
+  }
+  
+  .content {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .content p, ul {
+    font-size: 0.9rem;
+    line-height: 160%;
+  }
+  
+  .ordem {
+    padding-left: 1.5rem;
+  }
+  
+  .topico {
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+  
+  .barra-progresso {
+    margin-top: 3rem;
+    height: 1.75rem;
+  }
+  
+  .bola {
+    width: 2.5rem;
+  }
+  
+  .botao-caixa {
+    justify-content: center;
+  }
+  
+  .botao {
+    width: 100%;
+    max-width: 14rem;
+    height: 2.75rem;
+  }
+  
+  .botao a {
+    font-size: 1rem;
+  }
+  
+  .expressao-logica p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,72 @@
+const express = require("express");
+const router = express.Router();
+const multer = require("multer");
+const path = require("path");
+
+// Configuração do Multer para upload de arquivos
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "public/uploads/");
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname));
+  },
+});
+
+const upload = multer({ storage: storage });
+
+// Middleware para verificar se o usuário é professor
+const isProfessor = (req, res, next) => {
+  if (req.user && req.user.role === "professor") {
+    return next();
+  }
+  res.redirect("/login");
+};
+
+router.use(isProfessor);
+
+// Dashboard do professor
+router.get("/", (req, res) => {
+  res.render("dashboard/professor/index", {
+    user: req.user,
+    title: "Dashboard Professor",
+  });
+});
+
+// Rotas de cursos
+router.get("/curso/new", (req, res) => {
+  res.render("dashboard/professor/criar_curso", {
+    user: req.user,
+    title: "Criar Curso",
+  });
+});
+
+router.post("/curso/save", upload.single("imagem"), (req, res) => {
+  // Lógica para salvar curso
+});
+
+// Rotas de aulas
+router.get("/aula/new", (req, res) => {
+  res.render("dashboard/professor/criar_aula", {
+    user: req.user,
+    title: "Criar Aula",
+  });
+});
+
+router.post("/aula/save", upload.single("video"), (req, res) => {
+  // Lógica para salvar aula
+});
+
+// Rotas de exercícios
+router.get("/exercicio/new", (req, res) => {
+  res.render("dashboard/professor/criar_exercicio", {
+    user: req.user,
+    title: "Criar Exercício",
+  });
+});
+
+router.post("/exercicio/save", (req, res) => {
+  // Lógica para salvar exercício
+});
+
+module.exports = router;

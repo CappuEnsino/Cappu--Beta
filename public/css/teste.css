@@ -1,0 +1,20 @@
+.cursos {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos internos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto dentro dos <p> */
+    gap: 0.5em; /* Adiciona um espaçamento entre os <p> */
+    border: 1px solid #ccc; /* Adiciona uma borda para visualização */
+    padding: 1em; /* Adiciona um espaçamento interno */
+    flex: 1; /* Faz com que cada curso ocupe o mesmo espaço */
+  }
+  
+  /* Container principal para os cursos */
+  .cursos-container {
+    display: flex;
+    flex-direction: row; /* Coloca os cursos em uma linha */
+    justify-content: space-between; /* Distribui o espaço entre os cursos */
+    gap: 2em; /* Adiciona um espaçamento entre os cursos */
+    padding: 1em; /* Adiciona um espaçamento interno */
+  }
