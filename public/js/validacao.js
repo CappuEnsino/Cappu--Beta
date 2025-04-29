@@ -2,9 +2,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     event.preventDefault();
 
     const credenciais = [
-        { email: "aluno@gmail.com", senha: "senha123", redirect: "../aluno/a-perfil.html" },
-        { email: "admin@gmail.com", senha: "senha123", redirect: "../aluno/adm-painel.html" },
-        { email: "professor@gmail.com", senha: "senha123", redirect: "../professor/p-professor.html" }
+        { email: "aluno@gmail.com", senha: "senha123", redirect: "../dashboard/aluno/a-perfil" },
+        { email: "admin@gmail.com", senha: "senha123", redirect: "../dashboard/adm/adm-painel" },
+        { email: "professor@gmail.com", senha: "senha123", redirect: "../dashboard/professor/p-professor"}
     ];
 
     const email = document.getElementById('email').value.trim();

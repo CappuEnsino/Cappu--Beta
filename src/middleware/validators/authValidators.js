@@ -63,6 +63,7 @@ exports.loginValidation = [
 
 // Middleware de validação formatado
 exports.validate = (req, res, next) => {
+  console.log('Validation req.body:', req.body);
   const errors = validationResult(req);
   if (errors.isEmpty()) {
     return next();

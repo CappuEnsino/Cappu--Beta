@@ -22,7 +22,7 @@ router.get("/cl-login",
 router.get("/cl-cadastro", 
   isNotLoggedIn, // Novo middleware
   (req, res) => {
-    res.render("auth/cl-cadastro");
+    res.render("auth/cl-cadastro", { role: 'aluno' });
   }
 );
 

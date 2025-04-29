@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="../../css/header2.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify/dist/simple-notify.min.css" />
+    <style>
+        .sn-notifications-container {
+            position: fixed !important;
+            top: 10px !important;
+            left: 10px !important;
+            bottom: auto !important;
+            right: auto !important;
+            transform: none !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -25,47 +36,81 @@
             <h2>CADASTRE-SE</h2>
 
             
-                <form>
+                <form id="cadastroForm" action="/auth/cl-cadastro" method="POST">
                     <section class="campo">
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" class="caixa" placeholder="Digite seu nome">
+                        <input type="text" id="nome" name="name" class="caixa" placeholder="Digite seu nome">
                     </section>
                 
                     <section class="campo">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" class="caixa" placeholder="Digite seu e-mail">
+                        <input type="email" id="email" name="email" class="caixa" placeholder="Digite seu e-mail">
                     </section>
                 
                     <section class="campo">
                         <label for="documento">CPF - CNPJ</label>
-                        <input type="text" id="documento" class="caixa" placeholder="Digite seu CPF ou CNPJ">
+                        <input type="text" id="documento" name="document" class="caixa" placeholder="Digite seu CPF ou CNPJ">
                     </section>
                 
                     <section class="campo">
                         <label for="senha">Senha</label>
-                        <input type="password" id="senha" class="caixa" placeholder="Digite sua senha">
+                        <input type="password" id="senha" name="password" class="caixa" placeholder="Digite sua senha">
                     </section>
                 
                     <section class="campo">
                         <label for="confirmar_senha">Confirmar Senha</label>
-                        <input type="password" id="confirmar_senha" class="caixa" placeholder="Confirme sua senha">
+                        <input type="password" id="confirmar_senha" name="confirmPassword" class="caixa" placeholder="Confirme sua senha">
                     </section>
+                    <input type="hidden" name="role" value="aluno">
+                    <section class="termos">
+                        <input type="checkbox" id="termos">
+                        <label for="termos">Eu aceito os <a href="#">Termos de Uso</a></label>
+                    </section>
+                    
+                    <button type="submit" class="botao">CADASTRAR</button>
                 </form>
-
-                <section class="termos">
-                    <input type="checkbox" id="termos">
-                    <label for="termos">Eu aceito os <a href="#">Termos de Uso</a></label>
-                </section>
-                
-
-                <button type="submit" class="botao">CADASTRAR</button>
-                
+        </section>
     </main>
 
     <footer>
         <img src="../../Images/Cappucino.svg" alt="cafe" class="cafe">
-        <p>© 2024 Cappuensino. Todos os direitos reservados.</p>
+        <p> 2024 Cappuensino. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-notify/dist/simple-notify.min.js"></script>
+    <script>
+    document.getElementById('cadastroForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        const payload = new URLSearchParams(formData);
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: payload
+            });
+            const data = await response.json();
+            if (data.success) {
+                new Notify({ status: 'success', title: 'Sucesso', text: data.message || 'Cadastro realizado com sucesso', position: 'left top' });
+                setTimeout(() => { window.location.href = data.redirect || '/'; }, 2000);
+            } else {
+                if (data.errors) {
+                    Object.values(data.errors).flat().forEach(msg => {
+                        new Notify({ status: 'error', title: 'Erro', text: msg, position: 'left top' });
+                    });
+                } else {
+                    new Notify({ status: 'error', title: 'Erro', text: data.message || 'Erro ao cadastrar', position: 'left top' });
+                }
+            }
+        } catch (error) {
+            new Notify({ status: 'error', title: 'Erro', text: 'Erro de conexão, tente novamente', position: 'left top' });
+        }
+    });
+    </script>
 
 </body>
 </html>
