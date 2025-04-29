@@ -19,7 +19,7 @@ router.post(
   loginValidation,
   validate,
   passport.authenticate("local", {
-    successRedirect: "/auth/selecao-perfil",
+    successRedirect: "/auth/cl-loginmain",
     failureRedirect: "/auth/login",
     failureFlash: true,
   })

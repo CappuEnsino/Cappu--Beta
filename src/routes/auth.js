@@ -12,14 +12,18 @@ const { isLoggedIn, isNotLoggedIn } = require("../middleware/authe");
 //------------------------------------------------------------------
 // Rotas Públicas (acesso sem autenticação)
 //------------------------------------------------------------------
-router.get("/login", 
+router.get("/cl-login", 
   isNotLoggedIn, // Novo middleware
-  authController.showLogin
+  (req, res) => {
+    res.render("auth/cl-login");
+  }
 );
 
-router.get("/register", 
+router.get("/cl-cadastro", 
   isNotLoggedIn, // Novo middleware
-  authController.showRegister
+  (req, res) => {
+    res.render("auth/cl-cadastro");
+  }
 );
 
 router.get("/cl-loginmain", 
@@ -28,40 +32,40 @@ router.get("/cl-loginmain",
     res.render("auth/cl-loginmain");
   }
 );
+router.get("/cl-esq_senha", 
+  isNotLoggedIn,
+  (req, res) => {
+    res.render("auth/cl-esq_senha");
+  }
+);
+
+router.get("/cl-cod-rec", 
+  isNotLoggedIn,
+  (req, res) => {
+    res.render("auth/cl-cod-rec");
+  }
+);
 
 //------------------------------------------------------------------
 // Processamento de Formulários
 //------------------------------------------------------------------
-router.post("/register",
+router.post("/cl-cadastro",
   isNotLoggedIn, // Novo
   registerValidation,
   validate,
   authController.register
 );
 
-router.post("/login",
+router.post("/cl-login",
   isNotLoggedIn, // Novo
   loginValidation,
   validate,
   passport.authenticate("local", {
-    successRedirect: "/auth/selecao-perfil",
-    failureRedirect: "/auth/login",
+    successRedirect: "/auth/cl-loginmain",
+    failureRedirect: "/auth/cl-login",
     failureFlash: "Email ou senha inválidos", // Mensagem explícita
     successFlash: "Login realizado com sucesso!" // Novo
   })
-);
-
-//------------------------------------------------------------------
-// Rotas Protegidas (requer autenticação)
-//------------------------------------------------------------------
-router.get("/selecao-perfil", 
-  isLoggedIn, // Novo middleware
-  (req, res) => {
-    res.render("auth/selecao-perfil", {
-      user: req.user, // Passa o usuário logado
-      title: "Selecione seu Perfil" // Novo
-    });
-  }
 );
 
 //------------------------------------------------------------------
