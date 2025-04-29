@@ -39,6 +39,12 @@ module.exports = {
         status: 'active' // Ou 'pending' para confirmação por email
       });
 
+      // Retorna JSON se for requisição AJAX
+      if (req.xhr) {
+        // Redirect AJAX signup to the client login page
+        return res.status(200).json({ success: true, message: 'Cadastro realizado com sucesso', redirect: '/auth/cl-login' });
+      }
+
       // Autenticar automaticamente
       req.login(user, (err) => {
         if (err) throw err;
@@ -47,6 +53,11 @@ module.exports = {
       });
 
     } catch (error) {
+      // Retorna erro em JSON se for AJAX
+      if (req.xhr) {
+        return res.status(500).json({ success: false, message: error.message });
+      }
+
       console.error("Erro no registro:", error);
       req.flash("error", error.message);
       res.redirect("/auth/register");
