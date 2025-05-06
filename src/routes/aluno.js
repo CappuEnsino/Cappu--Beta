@@ -19,27 +19,56 @@ router.get("/", (req, res) => {
   });
 });
 
-// Rotas de cursos
-router.get("/cursos", (req, res) => {
+router.get("/a-config", (req, res) => {
+  res.render("dashboard/aluno/a-config", {
+    user: req.user,
+    title: "Configurações",
+  });
+});
+
+router.get("/a-perfil", (req, res) => {
+  res.render("dashboard/aluno/a-perfil", {
+    user: req.user,
+    title: "Perfil Aluno",
+  });
+});
+
+
+
+
+router.get("/a-meuscursos", (req, res) => {
   res.render("dashboard/aluno/a-meuscursos", {
     user: req.user,
     title: "Meus Cursos",
   });
 });
 
-// Rotas de exercícios
-router.get("/exercicios", (req, res) => {
-  res.render("dashboard/aluno/exercicio", {
+
+router.get("/a-minharotina", (req, res) => {
+  res.render("dashboard/aluno/a-minharotina", {
     user: req.user,
-    title: "Exercícios",
+    title: "Minha Rotina",
   });
 });
 
-// Rotas de resumos
-router.get("/resumos", (req, res) => {
-  res.render("dashboard/aluno/a-resumo", {
+router.get("/a-meusmateriais", (req, res) => {
+  res.render("dashboard/aluno/a-meusmateriais", {
     user: req.user,
-    title: "Meus Resumos",
+    title: "Meus Materiais",
+  });
+});
+
+router.get("/a-gerenciarplano", (req,res) =>{
+  res.render("dashboard/aluno/a-gerenciarplano",{
+    user: req.user,
+    title: "Gerenciar Plano",
+  });
+});
+
+router.get("/cursos", (req,res) => {
+  res.render("dashboard/aluno/cursos", {
+    user : req.user,
+    title : "Cursos",
   });
 });
 

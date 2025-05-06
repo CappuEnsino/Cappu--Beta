@@ -61,11 +61,10 @@ router.post("/cl-login",
   loginValidation,
   validate,
   passport.authenticate("local", {
-    successRedirect: "/auth/cl-loginmain",
     failureRedirect: "/auth/cl-login",
-    failureFlash: "Email ou senha inválidos", // Mensagem explícita
-    successFlash: "Login realizado com sucesso!" // Novo
-  })
+    failureFlash: "Email ou senha inválidos"
+  }),
+  authController.login
 );
 
 //------------------------------------------------------------------
@@ -82,15 +81,20 @@ router.get("/cadastro-aluno",
   }
 );
 
-router.get("/cadastro-professor", 
-  isNotLoggedIn, // Novo
+router.get("/cadastro-professor",
+  isNotLoggedIn,
   (req, res) => {
-    res.render("auth/register", { 
-      role: "professor",
-      formData: req.flash("formData")[0], // Recupera dados em caso de erro
-      title: "Cadastro de Professor" // Novo
-    });
+    res.render("auth/cl-cadastro", { role: "professor" });
   }
+);
+
+router.post("/cadastro-professor",
+  isNotLoggedIn,
+  // force role to professor on this route
+  (req, res, next) => { req.body.role = 'professor'; next(); },
+  registerValidation,
+  validate,
+  authController.register
 );
 
 //------------------------------------------------------------------
