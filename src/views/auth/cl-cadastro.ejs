@@ -36,7 +36,7 @@
             <h2>CADASTRE-SE</h2>
 
             
-                <form id="cadastroForm" action="/auth/cl-cadastro" method="POST">
+                <form id="cadastroForm" action="/auth/<%= role === 'professor' ? 'cadastro-professor' : 'cl-cadastro' %>" method="POST">
                     <section class="campo">
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="name" class="caixa" placeholder="Digite seu nome">
@@ -61,7 +61,7 @@
                         <label for="confirmar_senha">Confirmar Senha</label>
                         <input type="password" id="confirmar_senha" name="confirmPassword" class="caixa" placeholder="Confirme sua senha">
                     </section>
-                    <input type="hidden" name="role" value="aluno">
+                    <input type="hidden" name="role" value="<%= role %>">
                     <section class="termos">
                         <input type="checkbox" id="termos">
                         <label for="termos">Eu aceito os <a href="#">Termos de Uso</a></label>
