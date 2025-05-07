@@ -17,12 +17,35 @@ const upload = multer({ storage: storage });
 
 
 // Dashboard do professor
-router.get("/", (req, res) => {
+router.get("/p-professor", (req, res) => {
   res.render("dashboard/professor/p-professor", {
     user: req.user,
     title: "Dashboard Professor",
   });
 });
+
+router.get("/p-config", (req, res) => {
+  res.render("dashboard/professor/p-config", {
+    user: req.user,
+    title: "Configurações",
+  });
+});
+
+router.get("/p-minharotina", (req, res) => {
+  res.render("dashboard/professor/p-minharotina", {
+    user: req.user,
+    title: "Minha Rotina",
+  });
+});
+
+router.get("/p_gere_curso", (req, res) => {
+  res.render("dashboard/professor/p_gere_curso", {
+    user: req.user,
+    title: "Gerenciar Cursos",
+  });
+});
+
+
 
 // Rotas de cursos
 router.get("/curso/new", (req, res) => {
