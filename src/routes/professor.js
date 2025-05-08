@@ -45,6 +45,41 @@ router.get("/p_gere_curso", (req, res) => {
   });
 });
 
+router.get("/p-curso_prof", (req, res) => {
+  res.render("dashboard/professor/p_curso_prof", {
+    user: req.user,
+    title: "Curso Professor",
+  });
+});
+
+router.get("/p-criar_aula", (req, res) => {
+  res.render("dashboard/professor/p-criar_aula", {
+    user: req.user,
+    title: "Criar Aula",
+  });
+});
+
+router.get("/p-criar_exer", (req, res) => {
+  res.render("dashboard/professor/p-criar_exer", {
+    user: req.user,
+    title: "Criar Exercício",
+  });
+});
+
+router.get("/p-criar_curso", (req, res) => {
+  res.render("dashboard/professor/p-criar_curso", {
+    user: req.user,
+    title: "Criar Curso",
+  });
+});
+
+router.get("/p_criar_mat", (req, res) => {
+  res.render("dashboard/professor/p_criar_mat", {
+    user: req.user,
+    title: "Criar Material",
+  });
+});
+
 
 
 // Rotas de cursos

@@ -34,8 +34,6 @@ router.get("/a-perfil", (req, res) => {
 });
 
 
-
-
 router.get("/a-meuscursos", (req, res) => {
   res.render("dashboard/aluno/a-meuscursos", {
     user: req.user,
@@ -50,6 +48,51 @@ router.get("/a-minharotina", (req, res) => {
     title: "Minha Rotina",
   });
 });
+router.get("/a-pomodoro", (req, res) => {
+  res.render("dashboard/aluno/a-pomodoro", {
+    user: req.user,
+    title: "Pomodoro",
+  });
+});
+router.get("/a-resumo", (req, res) => {
+  res.render("dashboard/aluno/a-resumo", {
+    user: req.user,
+    title: "Resumo",
+  });
+});
+
+router.get("/a-mnemonica", (req, res) => {
+  res.render("dashboard/aluno/a-mnemonica", {
+    user: req.user,
+    title: "Mnemonica",
+  });
+});
+
+router.get("/a-feynman", (req, res) => {
+  res.render("dashboard/aluno/a-feynman", {
+    user: req.user,
+    title: "Feynman",
+  });
+});
+router.get("/a-bd_feynman", (req, res) => {
+  res.render("dashboard/aluno/a-bd_feynman", {
+    user: req.user,
+    title: "Feynman",
+  });
+});
+router.get("/a-bd_mnemonicas", (req, res) => {
+  res.render("dashboard/aluno/a-bd_mnemonicas", {
+    user: req.user,
+    title: "Mnemonica",
+  });
+});
+router.get("/a-bd_resumos", (req, res) => {
+  res.render("dashboard/aluno/a-bd_resumos", {
+    user: req.user,
+    title: "Resumo",
+  });
+});
+
 
 router.get("/a-meusmateriais", (req, res) => {
   res.render("dashboard/aluno/a-meusmateriais", {
@@ -65,14 +108,54 @@ router.get("/a-gerenciarplano", (req,res) =>{
   });
 });
 
-router.get("/cursos", (req,res) => {
-  res.render("dashboard/aluno/cursos", {
+
+router.get("/a-todososcursos", (req,res) => {
+  res.render("dashboard/aluno/a-todososcursos", {
     user : req.user,
     title : "Cursos",
   });
 });
 
+router.get("/a-certificado", (req,res) => {
+  res.render("dashboard/aluno/a-certificado", {
+    user : req.user,
+    title : "Certificados",
+  });
+});
+
+router.get("/aula", (req,res) => {
+  res.render("dashboard/aluno/aula", {
+    user : req.user,
+    title : "Aula",
+  });
+});
+
+router.get("/aula-card", (req,res) => {
+  res.render("dashboard/aluno/aula-card", {
+    user : req.user,
+    title : "Aula",
+  });
+});
+
+router.get("/exercicio", (req,res) => {
+  res.render("dashboard/aluno/exercicio", {
+    user : req.user,
+    title : "Exercicio",
+  });
+});
+
+router.get("/a-avaliar", (req,res) => {
+  res.render("dashboard/aluno/avaliar", {
+    user : req.user,
+    title : "Avaliar",
+  });
+});
+
 router.post("/resumo/save", (req, res) => {
+  // Lógica para salvar resumo
+});
+
+router.post("/avaliar/save", (req, res) => {
   // Lógica para salvar resumo
 });
 
