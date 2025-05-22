@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário VARK - Parte 3</title>
+    <link rel="stylesheet" href="../../../../public/css/quest3_vark.css">
+    <link rel="stylesheet" href="../../../../public/css/header2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../../public/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+      <a href="../../../../src/views/dashboard/aluno/a-minharotina.ejs"><img src="../../../../public/images/voltar.svg" alt="Voltar"></a>
+      <p>QUESTIONÁRIO VARK</p>
+      <div>
+        <p>Aluno 1</p>
+        <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
+            <img src="../../../../public/images/perfil.svg" alt="imagem do perfil">
+            <div class="user-config" id="userConfig">
+                <ul>
+                    <li><a href="../../../../src/views/dashboard/aluno/a-perfil.ejs">MENU</a></li>
+                    <li><a href="../../../../src/views/dashboard/aluno/a-config.ejs">CONFIGURAÇÕES</a></li>
+                    <li><a href="../../../../src/views/pages/home/index.ejs">SAIR</a></li>
+                </ul>
+            </div>
+        </button>
+    </div>
+    </header>
+
+    <main class="container">
+        <section class="instrucoes">
+            <p>Escolha as respostas que melhor explicam a sua preferência. Nos casos em que apenas uma resposta não se encaixar suficientemente na sua percepção, por favor, escolha mais de uma. Deixe em branco qualquer questão que não se aplique.</p>
+        </section>
+
+        <form id="vark-form">
+            <!-- Questão 9 -->
+            <section class="quest">
+                <h3>9 - Um site tem um vídeo mostrando como fazer um gráfico especial. Nele a pessoa fala algumas listas, palavras descrevendo o que fazer e alguns diagramas. Eu aprenderia melhor:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q9" value="c">
+                        <span>Olhando os diagramas.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q9" value="a">
+                        <span>Ouvindo.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q9" value="b">
+                        <span>Lendo as palavras.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q9" value="d">
+                        <span>Assistindo o processo.</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Questão 10 -->
+            <section class="quest">
+                <h3>10 - Eu quero montar uma mesa de madeira que veio em partes. Eu montaria a partir de:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q10" value="c">
+                        <span>Diagramas mostrando cada estágio da montagem.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q10" value="d">
+                        <span>Assistindo a um vídeo de uma pessoa montando uma mesa similar.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q10" value="a">
+                        <span>Conselhos de alguém que já montou antes.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q10" value="b">
+                        <span>Instruções escritas que vieram com as partes da mesa.</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Questão 11 -->
+            <section class="quest">
+                <h3>11 - Eu quero aprender como jogar um novo jogo de tabuleiro ou um jogo de cartas. Eu:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q11" value="c">
+                        <span>Usaria os diagramas que explicam os vários estágios, movimentos e estratégias no jogo.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q11" value="a">
+                        <span>Ouviria alguém explicando e faria perguntas.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q11" value="d">
+                        <span>Assistiria outras pessoas jogando antes de entrar no jogo.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q11" value="b">
+                        <span>Leria as instruções.</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Questão 12 -->
+            <section class="quest">
+                <h3>12 - Eu quero guardar mais dinheiro, planejando meus próximos gastos. Eu:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q12" value="c">
+                        <span>Usaria gráficos mostrando diferentes opções para diferentes períodos de tempo.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q12" value="a">
+                        <span>Conversaria com um especialista sobre as opções.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q12" value="d">
+                        <span>Consideraria exemplos de cada opção utilizando minhas informações financeiras.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q12" value="b">
+                        <span>Leria um catálogo impresso que descreve as opções em detalhe.</span>
+                    </label>
+                </div>
+            </section>
+
+            <div class="navegacao">
+                <button type="button" class="botao-anterior" onclick="window.location.href='../../../../src/views/dashboard/aluno/quest2_vark.ejs'">ANTERIOR</button>
+                <div class="indicador-progresso">
+                    <span class="pagina-atual">3</span>
+                    <span class="separador">/</span>
+                    <span class="total-paginas">4</span>
+                </div>
+                <button type="button" class="botao-proximo" onclick="window.location.href='../../../../src/views/dashboard/aluno/quest4_vark.ejs'">PRÓXIMO</button>
+            </div>
+        </form>
+    </main>
+
+    <div class="container-progresso-geral">
+        <div class="barra-progresso-grande">
+            <div class="progresso-grande"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            <p> 2023 Questionário VARK. Todos os direitos reservados.</p>
+            <p>Baseado no modelo VARK de Neil Fleming</p>
+        </div>
+    </footer>
+
+    <script src="../../../../public/js/icon-menu.js"></script>
+</body>
+</html>

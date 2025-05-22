@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário VARK</title>
+    <link rel="stylesheet" href="../../../../public/css/quest_vark.css">
+    <link rel="stylesheet" href="../../../../public/css/header2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../../public/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+      <a href="../../../../src/views/dashboard/aluno/a-minharotina.ejs"><img src="../../../../public/images/voltar.svg" alt="Voltar"></a>
+      <p>QUESTIONÁRIO VARK</p>
+      <div>
+        <p>Aluno 1</p>
+        <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
+            <img src="../../../../public/images/perfil.svg" alt="imagem do perfil">
+            <div class="user-config" id="userConfig">
+                <ul>
+                    <li><a href="../../../../src/views/dashboard/aluno/a-perfil.ejs">MENU</a></li>
+                    <li><a href="../../../../src/views/dashboard/aluno/a-config.ejs">CONFIGURAÇÕES</a></li>
+                    <li><a href="../../../../src/views/pages/home/index.ejs">SAIR</a></li>
+                </ul>
+            </div>
+        </button>
+    </div>
+    </header>
+
+    <main class="container">
+        <section class="instrucoes">
+            <p>Escolha as respostas que melhor explicam a sua preferência. Nos casos em que apenas uma resposta não se encaixar suficientemente na sua percepção, por favor, escolha mais de uma. Deixe em branco qualquer questão que não se aplique.</p>
+        </section>
+
+        <form id="vark-form">
+            <!-- Questão 1 -->
+            <section class= "quest">
+                <h3>1 - Eu quero saber mais sobre uma casa ou um apartamento. Antes de visitá-la(o) eu gostaria de:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q1" value="a">
+                        <span>Ter uma conversa com o proprietário.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="b">
+                        <span>Ter uma descrição impressa dos cômodos e suas características.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="c">
+                        <span>Uma planta mostrando os cômodos e um mapa da área.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="d">
+                        <span>Assistir a um vídeo da propriedade.</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Questão 2 -->
+            <section class= "quest">
+                <h3>2 - Ao escolher uma carreira ou área de estudo, eu escolheria:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q2" value="c">
+                        <span>Trabalho com desenhos, mapas e gráficos.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="a">
+                        <span>Comunicação com outros através de discussão.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="d">
+                        <span>Aplicação do meu conhecimento em situações reais.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="b">
+                        <span>Boa utilização de palavras na comunicação escrita.</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Questão 3 -->
+            <section class= "quest">
+                <h3>3 - Eu prefiro assistir um apresentador ou um professor que use:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q3" value="d">
+                        <span>Demonstrações, modelos ou sessões práticas.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="b">
+                        <span>Folhetos, livros ou material de leitura.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="a">
+                        <span>Pergunta e resposta, conversa, discussão em grupo ou convidados para falar.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="c">
+                        <span>Diagramas, gráficos ou apresentações visuais.</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Questão 4 -->
+            <section class= "quest">
+                <h3>4 - Eu quero descobrir mais sobre um passeio que vou fazer. Eu:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q4" value="b">
+                        <span>Examinaria detalhes sobre os pontos altos e atividades do passeio.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="a">
+                        <span>Conversaria com a pessoa que planejou o passeio ou com outros que irão ao passeio.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="c">
+                        <span>Usaria um mapa e veria onde são os lugares.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="d">
+                        <span>Experimentaria partes do passeio antecipadamente, se possível.</span>
+                    </label>
+                </div>
+            </section>
+
+            <div class="navegacao">
+                <div class="indicador-progresso">
+                    <span class="pagina-atual">1</span>
+                    <span class="separador">/</span>
+                    <span class="total-paginas">4</span>
+                </div>
+                <button type="button" class="botao-proximo" onclick="window.location.href='../../../../src/views/dashboard/aluno/quest2_vark.ejs'">PRÓXIMO</button>
+            </div>
+        </form>
+    </main>
+
+    <div class="container-progresso-geral">
+        <div class="barra-progresso-grande">
+            <div class="progresso-grande"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            <p> 2023 Questionário VARK. Todos os direitos reservados.</p>
+            <p>Baseado no modelo VARK de Neil Fleming</p>
+        </div>
+    </footer>
+
+    <script src="../../../../public/js/icon-menu.js"></script>
+</body>
+</html>

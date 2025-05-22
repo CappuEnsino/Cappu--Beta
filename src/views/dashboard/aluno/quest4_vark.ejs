@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário VARK - Parte 4</title>
+    <link rel="stylesheet" href="../../../../public/css/quest4_vark.css">
+    <link rel="stylesheet" href="../../../../public/css/header2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../../public/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+      <a href="../../../../src/views/dashboard/aluno/a-minharotina.ejs"><img src="../../../../public/images/voltar.svg" alt="Voltar"></a>
+      <p>QUESTIONÁRIO VARK</p>
+      <div>
+        <p>Aluno 1</p>
+        <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
+            <img src="../../../../public/images/perfil.svg" alt="imagem do perfil">
+            <div class="user-config" id="userConfig">
+                <ul>
+                    <li><a href="../../../../src/views/dashboard/aluno/a-perfil.ejs">MENU</a></li>
+                    <li><a href="../../../../src/views/dashboard/aluno/a-config.ejs">CONFIGURAÇÕES</a></li>
+                    <li><a href="../../../../src/views/pages/home/index.ejs">SAIR</a></li>
+                </ul>
+            </div>
+        </button>
+    </div>
+    </header>
+
+    <main class="container">
+        <section class="instrucoes">
+            <p>Escolha as respostas que melhor explicam a sua preferência. Nos casos em que apenas uma resposta não se encaixar suficientemente na sua percepção, por favor, escolha mais de uma. Deixe em branco qualquer questão que não se aplique.</p>
+        </section>
+
+        <form id="vark-form">
+            <!-- Questão 13 -->
+            <section class="quest">
+                <h3>13 - Eu tenho um problema com o meu coração. Eu preferiria que o médico:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q13" value="c">
+                        <span>Me mostrasse um diagrama sobre o que está errado.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q13" value="a">
+                        <span>Descrevesse o que está errado.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q13" value="b">
+                        <span>Me desse algo para ler para explicar o que está errado.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q13" value="d">
+                        <span>Utilizasse um modelo de plástico para mostrar o que está errado.</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Questão 14 -->
+            <section class="quest">
+                <h3>14 - Preciso encontrar o caminho para uma loja recomendada por um amigo. Eu:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q14" value="a">
+                        <span>Pediria ao meu amigo as informações sobre como chegar.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q14" value="c">
+                        <span>Usaria um mapa.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q14" value="d">
+                        <span>Descobriria a localização da loja em relação a um local que conheço.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q14" value="b">
+                        <span>Anotaria as informações sobre as ruas que preciso para lembrar.</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Questão 15 -->
+            <section class="quest">
+                <h3>15 - Eu quero aprender como tirar fotografias melhores. Eu:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q15" value="d">
+                        <span>Utilizaria exemplos de fotografias boas e ruins mostrando como melhorá-las.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q15" value="b">
+                        <span>Utilizaria as instruções escritas sobre o que fazer.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q15" value="c">
+                        <span>Utilizaria diagramas que show a câmera e o que cada parte faz.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q15" value="a">
+                        <span>Faria perguntas e conversaria sobre a câmera e suas características.</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Questão 16 -->
+            <section class="quest">
+                <h3>16 - Terminei uma competição ou prova e gostaria de ter um feedback. Gostaria que este feedback:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q16" value="a">
+                        <span>Viesse de alguém que o discuta comigo.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q16" value="c">
+                        <span>Tivesse utilização de gráficos mostrando o que eu alcancei.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q16" value="b">
+                        <span>Tivesse a utilização de descrição escrita dos meus resultados.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q16" value="d">
+                        <span>Tivesse a utilização de exemplos do que eu fiz.</span>
+                    </label>
+                </div>
+            </section>
+
+            <div class="navegacao">
+                <button type="button" class="botao-anterior" onclick="window.location.href='../../../../src/views/dashboard/aluno/quest3_vark.ejs'">ANTERIOR</button>
+                <div class="indicador-progresso">
+                    <span class="pagina-atual">4</span>
+                    <span class="separador">/</span>
+                    <span class="total-paginas">4</span>
+                </div>
+                <button type="button" class="botao-proximo" onclick="window.location.href='../../../../src/views/dashboard/aluno/conclusao.ejs'">CONCLUIR</button>
+            </div>
+        </form>
+    </main>
+
+    <div class="container-progresso-geral">
+        <div class="barra-progresso-grande">
+            <div class="progresso-grande"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            <p> 2023 Questionário VARK. Todos os direitos reservados.</p>
+            <p>Baseado no modelo VARK de Neil Fleming</p>
+        </div>
+    </footer>
+
+    <script src="../../../../public/js/icon-menu.js"></script>
+</body>
+</html>
