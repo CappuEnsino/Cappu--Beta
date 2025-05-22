@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+:root {
+    --primary-color: #684a43;
+    --second-color: #BFAC95;
+  }
+
+h1 {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+table {
+    font-family: "Fira Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 2px solid black;
+  text-align: center;
+  margin: none;
+  font-family: "Fira Sans", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.4em;
+  width: 50px;
+  height: 50px;
+}
+
+th {
+  border: 2px solid black;
+  font-style: italic;
+  font-family: "Fira Sans", serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 0.9em;
+  padding: 0px 10px;
+  width: 50px;
+  height: 10px;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 10% 0px;
+}
+
+.conteudo.modo-retraido {
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#mes {
+    margin-bottom: 1em;
+}
+
+.line {
+    border: 1px solid black;
+    height: 55vh;
+    width: 1px;
+    margin-right: -10em;
+}
+
+.brown-box {
+    background-color: var(--primary-color);
+    padding: 15px 3em 3em 3em;
+    border-radius: 1em;
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 3em;
+}
+
+h2 {
+    color: white;
+    font-weight: 800;
+    font-size: 2.5rem;
+    font-style: italic;
+    max-width: 220px;
+    text-align: left;
+}
+
+#close {
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    margin-left: 100%;
+    border-radius: 2em;
+}
+
+#block {
+    width: 10em;
+    height: auto;
+}
+
+#pt-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+}
+
+#atualizar-plano {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 0.5em 3em;
+    border-radius: 2em;
+    border: none;
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#open {
+    cursor: pointer;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1rem;
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 2em;
+    border: 2px solid var(--primary-color);
+    padding: 0.5em 3em;
+}
+
+#open:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.invert {
+    background-color: white;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    background-image: url("close-inv.svg");
+    background-size: cover;
+}
+
+#atualizar-plano:hover {
+    background-color: var(--primary-color);
+    color: white;
+    text-shadow: 0px 0px 4px white;
+    transition: all 0.2s ease-in-out;
+}
+
+#p-start {
+    max-width: 400px;
+    margin: 2em 5em;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 350;
+}
+
+#start {
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    padding: 1em 5em;
+    border-radius: 5em;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: italic;
+    cursor: pointer;
+    margin-top: 2em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 2em;
+    color: var(--primary-color);
+}
+
+.metodos {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 35%;
+}
+
+#pomodoro, #resumos, #mnemonica, #feynman {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.h4-metodo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.desc-metodo {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.button-go > img {
+    width: 35px;
+    height: auto;
+}
+
+.button-go {
+    cursor: pointer;
+}
+
+.img {
+    width: 30px;
+    height: auto;
+}
+
+@media (max-width: 1350px) {
+    #atualizar-plano {
+        font-size: 0.8rem;
+        padding: 0.3em 2em;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #pt-2 {
+        gap: 1em;
+    }
+
+    #block {
+        width: 8em;
+    }
+
+    .cont {
+        gap: 1em;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .line {
+        margin-right: 0em;
+        height: 45vh;
+    }
+
+    .conteudo {
+        margin: 20% 0px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .line {
+        border: none;
+        height: 0px;
+        width: 0px;
+        margin-right: 0px;
+    }
+
+    .conteudo {
+        width: 100%;
+    }
+
+    .conteudo {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        margin: 10% 0px;
+    }
+
+    #pomodoro, #resumos, #mnemonica, #feynman {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .h4-metodo {
+        font-size: 2rem;
+        align-self: flex-start;
+    }
+    
+    .desc-metodo {
+        font-size: 2rem;
+    }
+    
+    .button-go > img {
+        width: 50px;
+        height: auto;
+    }
+    
+    .img {
+        width: 50px;
+        height: auto;
+    }
+}
+
+@media (max-width: 550px) {
+    
+    
+    .brown-box {
+        padding: 1em 2em 2em 2em;
+    }
+
+    .cont {
+        gap: 4em;
+    }
+
+    #atualizar-plano {
+        font-size: 1rem;
+        padding: 1em;
+        border-radius: 1.5em;
+    }
+
+    #atualizar-plano span {
+        display: block;
+    }
+
+    #close {
+        cursor: pointer;
+        width: 2em;
+        height: auto;
+        margin-left: 95%;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        max-width: 100px;
+    }
+
+    #block {
+        width: 5em;
+    }
+
+    th, td {
+        font-size: 1.2rem;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+
+    th {
+        width: 30px;
+        height: auto;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 350px) {
+    #close {
+        width: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .cont {
+        gap: 2em;
+    }
+
+    #p-start {
+        margin: 2em 1em;
+    }
+}

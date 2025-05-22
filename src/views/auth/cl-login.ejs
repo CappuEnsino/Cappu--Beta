@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Cappuensino</title>
-    <link rel="stylesheet" href="../../css/login.css">
-    <link rel="stylesheet" href="../../css/header2.css">
+    <link rel="stylesheet" href="../../../public/css/login.css">
+    <link rel="stylesheet" href="../../../public/css/header2.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../public/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     
     <header>
         <button class="back-button" onclick="history.back()">
-            <img src="../../Images/voltar.svg" alt="seta">
+            <img src="../../../public/images/voltar.svg" alt="seta">
         </button>
         <section class="logo-container">
-            <img src="../../Images/logo+nome.svg" alt="logo" class="logo">
+            <img src="../../../public/images/logo+nome.svg" alt="logo" class="logo">
         </section>
       </header>
 
@@ -24,7 +24,7 @@
         <section class="cadastro">
             <h2>LOGIN</h2>
 
-            <form action="/auth/cl-login" method="POST" id="loginForm">
+            <form action="cl-login.ejs" method="POST" id="loginForm">
                 <section class="campo">
                     <label for="email">E-mail</label>
                     <input type="text" id="email" name="email" class="caixa" placeholder="Digite seu e-mail">
@@ -39,15 +39,15 @@
                 <button type="submit" class="botao">ENTRAR</button>
             
                 
-                <a href="/auth/cl-esq_senha" class="senha">Esqueceu a senha?</a>
-                <a href="/auth/cl-loginmain" class="cad">Cadastre-se</a>
+                <a href="cl-esq_senha.ejs" class="senha">Esqueceu a senha?</a>
+                <a href="cl-loginmain.ejs" class="cad">Cadastre-se</a>
             </form>
 
         </section>
     </main>
 
     <footer>
-        <img src="../../Images/Cappucino.svg" alt="Café" class="cafe">
+        <img src="../../../public/images/Cappucino.svg" alt="Café" class="cafe">
         <p> 2024 Cappuensino. Todos os direitos reservados.</p>
     </footer>
 </body>

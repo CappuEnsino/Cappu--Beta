@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="minha-rotina.css">
+    <title>Sem Rotina</title>
+</head>
+<body>
+    <header>
+        <!-- colocar o header aqui -->
+    </header>
+    <main>
+        <section class="conteudo" id="conteudo">
+            <section class="calendário">
+                <h1 id="mes">Mes</h1>
+                <script>
+                    function atualizarMes() {
+                        const meses = [
+                            "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+                            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+                        ];
+                        const mesAtual = new Date().getMonth();
+                        document.getElementById("mes").textContent = meses[mesAtual];
+                    }
+                    window.onload = atualizarMes;
+                </script>
+                <section class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>dom</th>
+                                <th>seg</th>
+                                <th>ter</th>
+                                <th>qua</th>
+                                <th>qui</th>
+                                <th>sex</th>
+                                <th>sáb</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+                
+            </section>
+
+            <button id="open" onclick="mostrarSections()" style="display: none;">Mudar Plano</button>
+
+            <section class="line" id="secao1"></section>
+            
+            <section class="brown-box" id="secao2">
+                <img src="close.svg" alt="close-button" id="close" onclick="esconderSections()" onmouseover="inverterCor()" onmouseout="resetarCor()">
+                <section class="cont">
+                    <section id="pt-1">
+                        <h2>LIBERE COM O PLANO PREMIUM!</h2>
+                    </section>
+                    <section id="pt-2">
+                        <img src="block.svg" alt="block" id="block">
+                        <button id="atualizar-plano" href="#">
+                            <span>Atualizar</span>
+                            <span>Plano</span>
+                        </button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+    <!-- não tem footer -->
+    <script>
+        function inverterCor() {
+            document.getElementById("close").classList.add("invert");
+            document.getElementById("close").src = "close-inv.svg";
+        }
+
+        function resetarCor() {
+            document.getElementById("close").classList.remove("invert");
+            document.getElementById("close").src = "close.svg";
+        }
+        
+        function esconderSections() {
+            document.getElementById("secao1").style.display = "none";
+            document.getElementById("secao2").style.display = "none";
+            document.getElementById("close").style.display = "none";
+            document.getElementById("open").style.display = "inline-block";
+
+            document.getElementById("conteudo").classList.add("modo-retraido");
+        }
+
+        function mostrarSections() {
+            document.getElementById("secao1").style.display = "block";
+            document.getElementById("secao2").style.display = "block";
+            document.getElementById("close").style.display = "inline-block";
+            document.getElementById("open").style.display = "none";
+
+            document.getElementById("conteudo").classList.remove("modo-retraido");
+        }
+    </script>
+</body>
+</html>

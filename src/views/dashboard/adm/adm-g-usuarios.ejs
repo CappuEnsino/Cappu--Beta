@@ -3,52 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/adm.css">
-    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../../../../public/css/adm.css"> <!--adicionar "../../css/" no href dessa linha-->
+
+    <link rel="shortcut icon" href="../../../../public/images/favicon.ico" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Gerenciamento de Usuários</title>
+
+    <title>Gerenciamento de Cursos</title>
 </head>
 <body>
     <header>
-        <img src="/images/logo.svg" alt="logo" id="logo">
+        <img src="../../../../public/images/logo.svg" alt="logo" id="logo">
         <section id="user">
             <p id="name_user">Administrador1</p>
             <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
                 <section id="circle"></section>
                 <div class="user-config" id="userConfig">
                     <ul>
-                        <li><a href="/adm/../home/h-home">SAIR</a></li>
+                        <li><a href="../../pages/home/index.ejs">SAIR</a></li>
                     </ul>
                 </div>
             </button>
     </header>
     <main>
         <nav>
-            <a href="/adm/adm-painel" title="Painel de Controle">painel de controle</a>
-            <a href="/adm/adm-g-cursos" title="gerenciamento de cursos">gerenciamento de cursos</a>
+            <a href="adm-painel.ejs" title="Painel de Controle">painel de controle</a>
+            <a href="adm-g-cursos.ejs" title="gerenciamento de cursos">gerenciamento de cursos</a>
             <section class="select">
-                <img src="/images/group.svg" alt="Grupo">
+                <img src="../../../../public/images/gamepad.svg" alt="Usuarios">
                 <p>gerenciamento de usuários</p>
             </section>
-            <a href="/adm/adm-financeiro" title="financeiro">financeiro</a>
+            <a href="adm-financeiro.ejs" title="financeiro">financeiro</a>
+            <a href="adm-suporte.ejs" title="suporte">suporte</a>
         </nav>
         <section class="conteudo">
-            <h1>Gerenciamento de alunos</h1>
+            <h1>Gerenciamento de cursos</h1>
             <br>
-            <p><i>Nessa área você pode adicionar, excluir, alterar usuários, e atribuir <br> direitos de acesso.</i> </p>
+            <p><i>Nessa área você pode adicionar, excluir, alterar cursos, e atribuir direitos <br> de acesso.</i></p>
             
             <section class="quadrado2">
                 <section class="caixa-cinza">
-                    <input type="text" class="search-box" placeholder="Buscar alunos...">
+                    <input type="text" class="search-box" placeholder="Buscar cursos...">
                 </section>
     
                 <table class="gerenciamento">
                     <thead>
                         <tr>
                             <th>Nome</th>
-                            <th>E-mail</th>
+                            <th>Professor</th>
                             <th>tipo</th>
                             <th>Infos</th>
                             <th></th>
@@ -56,73 +63,73 @@
                     </thead> 
                     <tbody>
                         <tr>
-                            <td>ANA CAROLINA VIANA</td>
-                            <td>EMAILDAANA@GMAIL.COM</td>
-                            <td>ALUNO</td>
+                            <td>PHOTOSHOP PROFISSIONAL</td>
+                            <td>PROFESSOR1</td>
+                            <td>DESIGN</td>
                             <td>
                                 <a href="https://docs.google.com/document/d/1ZiRFy86bQjbeSW5df45Kl34bRXQt6Cug_Hcmo-3LrRY/edit?usp=sharing" target="_blank">
-                                    <img src="/images/find_in_page.svg" alt="Infos" >
+                                    <img src="../../../../public/images/find_in_page.svg" alt="Infos" >
                                 </a>
                             </td>
                             <td>
-                                <img src="/images/border color.svg" alt="Editar" >
-                                <img src="/images/delete.svg" alt="Lixeira">
+                                <img src="../../../../public/images/border color.svg" alt="Editar" >
+                                <img src="../../../../public/images/delete.svg" alt="Lixeira">
                             </td>
                         </tr>
                         <tr>
-                            <td>DANIEL HENRIQUEEEEE</td>
-                            <td>EMAILDO DANIEL@GMAIL.COM</td>
-                            <td>PROFESSOR</td>
+                            <td>PHYTON DO ZERO AO PRO</td>
+                            <td>PROFESSOR1</td>
+                            <td>DEVELOPER</td>
                             <td>
                                 <a href="https://docs.google.com/document/d/1ZiRFy86bQjbeSW5df45Kl34bRXQt6Cug_Hcmo-3LrRY/edit?usp=sharing" target="_blank">
-                                    <img src="/images/find_in_page.svg" alt="Infos" >
+                                    <img src="../../../../public/images/find_in_page.svg" alt="Infos" >
                                 </a>
                             </td>
                             <td>
-                                <img src="/images/border color.svg" alt="Editar" >
-                                <img src="/images/delete.svg" alt="Lixeira">
+                                <img src="../../../../public/images/border color.svg" alt="Editar" >
+                                <img src="../../../../public/images/delete.svg" alt="Lixeira">
                             </td>
                         </tr>
                         <tr>
-                            <td>CEZAR AUGUSTO</td>
-                            <td>EMAILDOCEZAR@GMAIL.COM</td>
-                            <td>ALUNO</td>
+                            <td>VIOLÃO PARA INICIANTES</td>
+                            <td>PROFESSOR1</td>
+                            <td>MÚSICA</td>
                             <td>
                                 <a href="https://docs.google.com/document/d/1ZiRFy86bQjbeSW5df45Kl34bRXQt6Cug_Hcmo-3LrRY/edit?usp=sharing" target="_blank">
-                                    <img src="/images/find_in_page.svg" alt="Infos" >
+                                    <img src="../../../../public/images/find_in_page.svg" alt="Infos" >
                                 </a>
                             </td>
                             <td>
-                                <img src="/images/border color.svg" alt="Editar" >
-                                <img src="/images/delete.svg" alt="Lixeira">
+                                <img src="../../../../public/images/border color.svg" alt="Editar" >
+                                <img src="../../../../public/images/delete.svg" alt="Lixeira">
                             </td>
                         </tr>
                         <tr>
-                            <td>JOAO MIL GRAU</td>
-                            <td>EMAILDO JOAO@GMAIL.COM</td>
-                            <td>ALUNO</td>
+                            <td>LÓGICA DE PROGRAMAÇÃO</td>
+                            <td>PROFESSOR1</td>
+                            <td>DEVELOPER</td>
                             <td>
                                 <a href="https://docs.google.com/document/d/1ZiRFy86bQjbeSW5df45Kl34bRXQt6Cug_Hcmo-3LrRY/edit?usp=sharing" target="_blank">
-                                    <img src="/images/find_in_page.svg" alt="Infos" >
+                                    <img src="../../../../public/images/find_in_page.svg" alt="Infos" >
                                 </a>
                             </td>
                             <td>
-                                <img src="/images/border color.svg" alt="Editar" >
-                                <img src="/images/delete.svg" alt="Lixeira">
+                                <img src="../../../../public/images/border color.svg" alt="Editar" >
+                                <img src="../../../../public/images/delete.svg" alt="Lixeira">
                             </td>
                         </tr>
                         <tr>
-                            <td>GUSTAVO OOO</td>
-                            <td>EMAILDO GUSTAVO@GMAIL.COM</td>
-                            <td>PROFESSOR</td>
+                            <td>HTML E CSS DO BÁSICO AO AVANÇADO</td>
+                            <td>PROFESSOR1</td>
+                            <td>DEVELOPER</td>
                             <td>
                                 <a href="https://docs.google.com/document/d/1ZiRFy86bQjbeSW5df45Kl34bRXQt6Cug_Hcmo-3LrRY/edit?usp=sharing" target="_blank">
-                                    <img src="/images/find_in_page.svg" alt="Infos" >
+                                    <img src="../../../../public/images/find_in_page.svg" alt="Infos" >
                                 </a>
                             </td>
                             <td>
-                                <img src="/images/border color.svg" alt="Editar" >
-                                <img src="/images/delete.svg" alt="Lixeira">
+                                <img src="../../../../public/images/border color.svg" alt="Editar" >
+                                <img src="../../../../public/images/delete.svg" alt="Lixeira">
                             </td>
                         </tr>
                     </tbody>

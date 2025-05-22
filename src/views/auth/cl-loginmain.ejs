@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cappuensino</title>
-    <link rel="stylesheet" href="../../css/cad.css">
-    <link rel="stylesheet" href="../../css/header2.css">
+    <link rel="stylesheet" href="../../../public/css/cad.css">
+    <link rel="stylesheet" href="../../../public/css/header2.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../public/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <button class="back-button" onclick="history.back()">
-            <img src="../../Images/voltar.svg" alt="seta">
+            <img src="../../../public/images/voltar.svg" alt="seta">
         </button>
         <section class="logo-container">
-            <img src="../../Images/logo+nome.svg" alt="logo" class="logo">
+            <img src="../../../public/images/logo+nome.svg" alt="logo" class="logo">
         </section>
     </header>
 
@@ -23,17 +23,17 @@
         <h1 class="titulo">QUAL PERFIL QUER CRIAR?</h1>
         
         <section class="botoes">
-            <a href="/auth/cl-cadastro"><button class="selecao">ALUNO</button></a>
-            <a href="/auth/cadastro-professor"><button class="selecao">PROFESSOR</button></a>
+            <a href="cl-cadastro.ejs"><button class="selecao">ALUNO</button></a>
+            <a href="cadastro-professor.ejs"><button class="selecao">PROFESSOR</button></a>
         </section>
 
         <section class="login-section">
-            Já tem conta? Faça <a href="/auth/cl-login" class="login-link">login</a>
+            Já tem conta? Faça <a href="cl-login.ejs" class="login-link">login</a>
         </section>
     </main>
 
     <footer>
-        <img src="../../Images/Cappucino.svg" alt="cappuccino" class="cafe">
+        <img src="../../../public/images/Cappucino.svg" alt="cappuccino" class="cafe">
         <p> 2024 Cappuensino. Todos os direitos reservados.</p>
     </footer>
 </body>
