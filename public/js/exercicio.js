@@ -47,6 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     completionButton.addEventListener('click', function() {
-        window.location.href = '../aluno/aula-card.html';
+        window.location.href = '/aluno/aula-card';
     });
 });

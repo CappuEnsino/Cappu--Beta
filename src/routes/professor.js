@@ -17,6 +17,10 @@ const upload = multer({ storage: storage });
 
 
 // Dashboard do professor
+router.get("/", (req, res) => {
+  res.redirect("/professor/p-professor");
+});
+
 router.get("/p-professor", (req, res) => {
   res.render("dashboard/professor/p-professor", {
     user: req.user,
@@ -31,56 +35,54 @@ router.get("/p-config", (req, res) => {
   });
 });
 
-router.get("/p-minharotina", (req, res) => {
-  res.render("dashboard/professor/p-minharotina", {
+router.get("/p-minha-rotina", (req, res) => {
+  res.render("dashboard/professor/p-minha-rotina", {
     user: req.user,
     title: "Minha Rotina",
   });
 });
 
-router.get("/p_gere_curso", (req, res) => {
-  res.render("dashboard/professor/p_gere_curso", {
+router.get("/p-gere-curso", (req, res) => {
+  res.render("dashboard/professor/p-gere-curso", {
     user: req.user,
     title: "Gerenciar Cursos",
   });
 });
 
 
+router.get("/p-curso-prof", (req, res) => {
+  res.render("dashboard/professor/p-curso-prof", {
+    user: req.user,
+    title: "Gerenciar Cursos",
+  });
+});
 
-// Rotas de cursos
-router.get("/curso/new", (req, res) => {
-  res.render("dashboard/professor/p_criar_curso", {
+router.get("p-criar-curso", (req, res) => {
+  res.render("dashboard/professor/p-criar-curso", {
     user: req.user,
     title: "Criar Curso",
   });
 });
 
-router.post("/curso/save", upload.single("imagem"), (req, res) => {
-  // Lógica para salvar curso
-});
-
-// Rotas de aulas
-router.get("/aula/new", (req, res) => {
-  res.render("dashboard/professor/p-criar_aula", {
+router.get("p-criar-aula", (req, res) => {
+  res.render("dashboard/professor/p-criar-aula", {
     user: req.user,
     title: "Criar Aula",
   });
 });
 
-router.post("/aula/save", upload.single("video"), (req, res) => {
-  // Lógica para salvar aula
-});
-
-// Rotas de exercícios
-router.get("/exercicio/new", (req, res) => {
-  res.render("dashboard/professor/p_criar_exer", {
+router.get("p-criar-exer", (req, res) => {
+  res.render("dashboard/professor/p-criar-exer", {
     user: req.user,
     title: "Criar Exercício",
   });
 });
 
-router.post("/exercicio/save", (req, res) => {
-  // Lógica para salvar exercício
+router.get("p-criar-mat", (req, res) => {
+  res.render("dashboard/professor/p-criar-mat", {
+    user: req.user,
+    title: "Criar Material",
+  });
 });
 
 module.exports = router;
