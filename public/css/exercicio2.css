@@ -1,0 +1,228 @@
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+:root {
+    --primary-color: #684A43;
+    --secondary-color: #8C6B63;
+    --text-color: #1f2937;
+    --light-gray: #f8fafc;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 16px;
+}
+
+/* Estilo da pergunta */
+.question {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2.5rem;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: var(--transition);
+}
+
+.question:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.question h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.25px;
+}
+
+.question p {
+    color: var(--text-color);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* Estilo das opções de resposta */
+.respostas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin: 2.5rem 0 4rem 0;
+}
+
+.opcao {
+    background: var(--white);
+    padding: 1.25rem 1.75rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.opcao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: #d1d5db;
+}
+
+/* Estilo para resposta correta */
+.opcao.correta {
+    position: relative;
+    border-color: #10b981;
+    background-color: #ecfdf5;
+}
+
+.opcao.correta::after {
+    content: '✓';
+    position: absolute;
+    right: 16px;
+    color: #10b981;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Estilo para resposta incorreta */
+.opcao.incorreta {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+    position: relative;
+}
+
+.opcao.incorreta::after {
+    content: '✕';
+    position: absolute;
+    right: 16px;
+    color: #ef4444;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.opcao p {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.05rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    padding-left: 12px;
+}
+
+/* Efeito de seleção */
+.opcao.selecionada {
+    background: #f9fafb;
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(104, 74, 67, 0.1);
+}
+
+/* Barra de progresso */
+.progress-container {
+    width: 100%;
+    padding: 1.5rem 0;
+    margin: 3rem 0 1rem 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Botões de navegação */
+.botao-navegacao {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.botao-navegacao:hover {
+    background: var(--secondary-color);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Container de botões */
+.botoes-navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.progress-bar {
+    width: 60%;
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress {
+    width: 80%;
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 6px;
+    transition: width 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .respostas {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .question {
+        padding: 1.75rem;
+    }
+    
+    h1 {
+        font-size: 1.875rem;
+        margin-bottom: 2rem;
+    }
+    
+    .opcao {
+        padding: 1.25rem 1.5rem;
+    }
+}
