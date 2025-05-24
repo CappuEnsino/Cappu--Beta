@@ -31,20 +31,20 @@ router.get("/suporte", (req, res) => {
 });
 
 // Rotas Institucionais
-router.get("/institucional/seguranca", (req, res) => {
-  res.render("pages/institucional/seguranca");
+router.get("/institucional/inst-seguranca", (req, res) => {
+  res.render("pages/institucional/inst-seguranca");
 });
 
-router.get("/institucional/acessibilidade", (req, res) => {
-  res.render("pages/institucional/acessibilidade");
+router.get("/institucional/inst-acessibilidade", (req, res) => {
+  res.render("pages/institucional/inst-acessibilidade");
 });
 
-router.get("/institucional/privacidade", (req, res) => {
-  res.render("pages/institucional/privacidade");
+router.get("/institucional/inst-privacidade", (req, res) => {
+  res.render("pages/institucional/inst-privacidade");
 });
 
-router.get("/institucional/termos-de-uso", (req, res) => {
-  res.render("pages/institucional/termos-de-uso");
+router.get("/institucional/inst-termos-de-uso", (req, res) => {
+  res.render("pages/institucional/inst-termos-de-uso");
 });
 
 module.exports = router; 
