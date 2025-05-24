@@ -42,8 +42,8 @@ router.get("/a-meuscursos", (req, res) => {
 });
 
 
-router.get("/a-minharotina", (req, res) => {
-  res.render("dashboard/aluno/a-minharotina", {
+router.get("/a-minha-rotina", (req, res) => {
+  res.render("dashboard/aluno/a-minha-rotina", {
     user: req.user,
     title: "Minha Rotina",
   });
