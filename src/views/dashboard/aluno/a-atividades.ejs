@@ -3,17 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../../public/css/a-atividade.css">
+    <link rel="stylesheet" href="/css/a-atividade.css">
+    <link rel="stylesheet" href="/css/header2.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico" type="image/x-icon">
     <title>Atividade</title>
 </head>
 <body>
     <header>
-        <!--Colocar o header aqui!-->
+        <a href="/aluno/a-perfil"><img src="/images/voltar.svg" alt=""></a>
+        <p>Atividades</p>
+        <div>
+          <p>Aluno 1</p>
+          <button class="user-icon" id="userIcon" aria-label="Abrir menu do usuário">
+              <img  src="/images/perfil.svg" alt="imagem do perfil">
+              <div class="user-config" id="userConfig">
+                  <ul>
+                      <li><a href="/aluno/a-perfil">MENU</a></li>
+                      <li><a href="/aluno/a-config">CONFIGURAÇÕES</a></li>
+                      <li><a href="/">SAIR</a></li>
+                  </ul>
+              </div>
+          </button>
+      </div>
     </header>
     <main>
         <section class="conteudo">
             <h1>atividade</h1>
-            <img src="../../../../public/images/camaleao.svg" alt="imagem do camaleão">
+            <img src="/images/camaleao.svg" alt="imagem do camaleão">
             <section class="question">
                 <h2>Exercício 1</h2>
                 <p>Qual é o nome deste animal?</p>
@@ -58,7 +74,7 @@
 
                 <hr>
 
-                <img src="../../../../public/images/espagetti.svg" alt="imagem do espagetti">
+                <img src="/images/espagetti.svg" alt="imagem do espagetti">
                 <section class="question">
                     <h2>Exercício 3</h2>
                     <p>Analise a imagem e diga qual o nome deste alimento:</p>
@@ -129,6 +145,6 @@
                 </button>
         </section>
     </main>
-    <!-- Não tem footer-->
+    <script src="/js/icon-menu.js"></script>
 </body>
 </html>

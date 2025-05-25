@@ -145,10 +145,85 @@ router.get("/exercicio", (req,res) => {
 });
 
 router.get("/a-avaliar", (req,res) => {
-  res.render("dashboard/aluno/avaliar", {
+  res.render("dashboard/aluno/a-avaliar", {
     user : req.user,
     title : "Avaliar",
   });
+});
+
+router.get("/quest1_vark", (req,res) => {
+  res.render("dashboard/aluno/quest1_vark", {
+    user : req.user,
+    title : "Questionario Vark",
+  });
+});
+
+router.get("/quest2_vark", (req,res) => {
+  res.render("dashboard/aluno/quest2_vark", {
+    user : req.user,
+    title : "Questionario Vark",
+  });
+});
+
+router.get("/quest3_vark", (req,res) => {
+  res.render("dashboard/aluno/quest3_vark", {
+    user : req.user,
+    title : "Questionario Vark",
+  });
+});
+
+router.get("/quest4_vark", (req,res) => {
+  res.render("dashboard/aluno/quest4_vark", {
+    user : req.user,
+    title : "Questionario Vark",
+  });
+});
+
+router.get("/conclusao", (req,res) => {
+  res.render("dashboard/aluno/conclusao", {
+    user : req.user,
+    title : "Questionario Vark",
+  });
+});
+
+router.get("/a-minha-rotina-2", (req,res) => {
+  res.render("dashboard/aluno/a-minha-rotina-2", {
+    user : req.user,
+    title : "Minha Rotina",
+  });
+});
+
+router.get("/a-bd_feynman", (req,res) => {
+  res.render("dashboard/aluno/a-bd_feynman", {
+    user : req.user,
+    title : "Feynman",
+  });
+});
+
+router.get("/a-bd_mnemonicas", (req,res) => {
+  res.render("dashboard/aluno/a-bd_mnemonicas", {
+    user : req.user,
+    title : "Mnemonica",
+  });
+});
+
+router.get("/a-bd_resumos", (req,res) => {
+  res.render("dashboard/aluno/a-bd_resumos", {
+    user : req.user,
+    title : "Resumo",
+  });
+});
+
+router.get("/pomodoro", (req,res) => {
+  res.render("dashboard/aluno/pomodoro", {
+    user : req.user,
+    title : "Pomodoro",
+  });
+});
+
+// Rotas para a Home
+router.get("/cursos", (req,res) => {
+  res.render("pages/home/cursos");
 });
 
 router.post("/resumo/save", (req, res) => {

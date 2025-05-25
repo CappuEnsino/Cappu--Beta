@@ -98,9 +98,7 @@ button {
 }
 .estrela img.ativa {
   filter: grayscale(0%); /* Estrelas selecionadas ficam coloridas */
-  
 }
-
 
 .rate {
   display: flex;
